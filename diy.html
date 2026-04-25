@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DIY Store — XtraSpain</title>
+  <meta name="description" content="Step-by-step digital guides, checklists, and templates for independent movers relocating to Spain. Expert knowledge at your own pace." />
+  <link rel="canonical" href="https://xtraspain.com/diy.html" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .store-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1px;
+      background: var(--gray-200);
+      border: 1px solid var(--gray-200);
+      margin-top: 48px;
+    }
+    .product-card {
+      background: var(--white);
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: background 0.15s;
+    }
+    .product-card:hover { background: var(--gray-100); }
+    .product-card__badge {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .product-card__icon { font-size: 32px; margin-bottom: 4px; }
+    .product-card h3 {
+      font-size: 21px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+    .product-card p {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.65;
+      flex: 1;
+    }
+    .product-card__includes {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 16px 0;
+      border-top: 1px solid var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
+    }
+    .product-card__includes li {
+      font-size: 13px;
+      color: var(--gray-600);
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+    .product-card__includes li::before {
+      content: '✓';
+      color: var(--terra);
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+    .product-card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .product-card__price {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+    .coming-soon-overlay {
+      position: relative;
+    }
+    .coming-soon-overlay::after {
+      content: 'Coming Soon';
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 18px;
+      color: var(--gray-400);
+      letter-spacing: 0.02em;
+      pointer-events: none;
+    }
+    .store-banner {
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      border-radius: 2px;
+      padding: 40px 48px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 64px;
+    }
+    .store-banner h3 {
+      font-size: 22px;
+      letter-spacing: -0.01em;
+      margin-bottom: 6px;
+    }
+    .store-banner p {
+      font-size: 14px;
+      color: var(--gray-600);
+      max-width: 420px;
+    }
+  </style>
+</head>
+<body class="page-offset">
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Xtra<span>Spain</span></a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="diy.html">DIY Store</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="services.html#contact" class="nav__cta">Get Started</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__num">DIY Relocation Store</div>
+      <h1>Move to Spain<br><em>on your terms.</em></h1>
+      <p>Expert-written guides, checklists, and templates. Everything you need to handle your Spanish relocation independently — without the expensive mistakes.</p>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section--sm section--gray">
+    <div class="container">
+      <div class="stats-bar" style="border:none; border-top:1px solid var(--gray-200); border-bottom:1px solid var(--gray-200);">
+        <div class="stat">
+          <div class="stat__num" style="font-size:32px;">📥</div>
+          <div class="stat__label" style="margin-top:8px; font-size:14px; color:var(--black);">Instant digital download</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num" style="font-size:32px;">🇬🇧</div>
+          <div class="stat__label" style="margin-top:8px; font-size:14px; color:var(--black);">Written in plain English</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num" style="font-size:32px;">🔄</div>
+          <div class="stat__label" style="margin-top:8px; font-size:14px; color:var(--black);">Updated for 2025 regulations</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STORE -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Available guides &amp; resources</h2>
+        <span class="badge badge--terra">Store opening soon</span>
+      </div>
+
+      <div class="store-grid">
+
+        <!-- Product 1 -->
+        <div class="product-card coming-soon-overlay">
+          <div class="product-card__icon">📋</div>
+          <div class="product-card__badge">
+            <span class="badge badge--terra">Bestseller</span>
+          </div>
+          <h3>The Complete Spain Relocation Checklist</h3>
+          <p>A step-by-step master checklist covering every task from 6 months before your move to 3 months after arrival. Editable PDF &amp; Notion template.</p>
+          <ul class="product-card__includes">
+            <li>Pre-move admin tasks (UK/US/EU departures)</li>
+            <li>Visa &amp; NIE application timeline</li>
+            <li>Housing, banking, healthcare setup</li>
+            <li>Post-arrival bureaucracy checklist</li>
+            <li>Editable PDF + Notion version</li>
+          </ul>
+          <div class="product-card__footer">
+            <span class="product-card__price">€19</span>
+            <a href="https://xtraspain.lemonsqueezy.com" target="_blank" rel="noopener" class="btn btn--primary">Buy Now →</a>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product-card coming-soon-overlay">
+          <div class="product-card__icon">🪪</div>
+          <div class="product-card__badge">
+            <span class="badge badge--outline">Guide</span>
+          </div>
+          <h3>NIE &amp; Padrón: The Complete How-To Guide</h3>
+          <p>The two most confusing first steps in Spain — fully explained. Which appointment, which forms, what to bring, and what happens if they say no.</p>
+          <ul class="product-card__includes">
+            <li>NIE in person vs. via proxy vs. consulate</li>
+            <li>Exact documents checklist per visa type</li>
+            <li>Padrón registration — city by city notes</li>
+            <li>Script templates in Spanish for appointments</li>
+          </ul>
+          <div class="product-card__footer">
+            <span class="product-card__price">€15</span>
+            <a href="https://xtraspain.lemonsqueezy.com" target="_blank" rel="noopener" class="btn btn--primary">Buy Now →</a>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product-card coming-soon-overlay">
+          <div class="product-card__icon">🏠</div>
+          <div class="product-card__badge">
+            <span class="badge badge--outline">Guide</span>
+          </div>
+          <h3>Renting in Spain: The Expat's No-BS Guide</h3>
+          <p>Find, negotiate, and sign a rental contract in Spain without getting burned. What's legal, what's a red flag, and how to protect your deposit.</p>
+          <ul class="product-card__includes">
+            <li>Understanding the LAU rental law</li>
+            <li>Contract clauses to watch for</li>
+            <li>Deposit &amp; fianza rules by region</li>
+            <li>Furnished vs. unfurnished negotiation tips</li>
+            <li>Rental contract glossary (Spanish → English)</li>
+          </ul>
+          <div class="product-card__footer">
+            <span class="product-card__price">€17</span>
+            <a href="https://xtraspain.lemonsqueezy.com" target="_blank" rel="noopener" class="btn btn--primary">Buy Now →</a>
+          </div>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product-card coming-soon-overlay">
+          <div class="product-card__icon">💼</div>
+          <div class="product-card__badge">
+            <span class="badge badge--black">Bundle</span>
+          </div>
+          <h3>DIY Relocator Bundle — All 3 Guides</h3>
+          <p>Everything above in one purchase. The complete toolkit for independent movers who want expert knowledge without the consultancy price tag.</p>
+          <ul class="product-card__includes">
+            <li>Complete Relocation Checklist</li>
+            <li>NIE &amp; Padrón Guide</li>
+            <li>Renting in Spain Guide</li>
+            <li>Priority email support for 30 days</li>
+          </ul>
+          <div class="product-card__footer">
+            <div>
+              <span class="product-card__price">€39</span>
+              <span style="font-size:13px; color:var(--gray-400); margin-left:8px; text-decoration:line-through;">€51</span>
+            </div>
+            <a href="https://xtraspain.lemonsqueezy.com" target="_blank" rel="noopener" class="btn btn--terra">Best Value →</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Notify banner -->
+      <div class="store-banner">
+        <div>
+          <h3>Store opening soon — get notified</h3>
+          <p>Leave your email and we'll let you know the moment the store goes live. Early subscribers get 20% off their first purchase.</p>
+        </div>
+        <form style="display:flex; gap:12px; flex-wrap:wrap;" action="#" method="POST">
+          <input type="email" name="notify_email" placeholder="your@email.com" style="font-family:var(--font-sans); font-size:14px; padding:12px 16px; border:1.5px solid var(--gray-200); border-radius:4px; outline:none; min-width:240px;" required />
+          <button type="submit" class="btn btn--primary">Notify Me →</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- UPSELL — Services -->
+  <div class="diy-banner" style="background:var(--gray-100); color:var(--black); border-top:1px solid var(--gray-200);">
+    <div class="container">
+      <div class="diy-banner__inner">
+        <div>
+          <div class="label label--terra" style="margin-bottom:16px;">Need more support?</div>
+          <h2 style="color:var(--black);">Skip the DIY — let us handle it.</h2>
+          <p style="color:var(--gray-600); margin-top:12px;">Our concierge packages give you personalised, hands-on support from start to finish. From €490.</p>
+        </div>
+        <a href="services.html" class="btn btn--primary">View Services →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="nav__logo">Xtra<span>Spain</span></span>
+          <p style="margin-top:14px;">Relocation services and resources for English speakers making Spain their home.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="services.html#concierge">Concierge Support</a></li>
+            <li><a href="services.html#qa">Expert Q&amp;A</a></li>
+            <li><a href="services.html#family">Family Package</a></li>
+            <li><a href="services.html#network">Collaborators</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="diy.html">DIY Store</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 XtraSpain. All rights reserved.</p>
+        <a href="mailto:hello@xtraspain.com">hello@xtraspain.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

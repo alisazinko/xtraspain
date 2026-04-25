@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services — XtraSpain</title>
+  <meta name="description" content="Concierge relocation support, expert Q&A sessions, family soft landing packages, and a trusted network of English-speaking lawyers, insurers and property agents in Spain." />
+  <link rel="canonical" href="https://xtraspain.com/services.html" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .service-block {
+      padding: 80px 0;
+      border-bottom: 1px solid var(--gray-200);
+      scroll-margin-top: calc(var(--nav-h) + 24px);
+    }
+    .service-block__header {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 24px;
+      align-items: start;
+      margin-bottom: 48px;
+    }
+    .service-block__num {
+      font-size: 12px;
+      font-weight: 300;
+      color: var(--gray-400);
+      letter-spacing: 0.08em;
+      padding-top: 8px;
+    }
+    .service-block__title h2 {
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+    .service-block__title p {
+      font-size: 16px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      max-width: 560px;
+    }
+    .includes-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .includes-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+    .includes-list li::before {
+      content: '→';
+      color: var(--terra);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .price-tag {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 4px;
+      margin-top: 32px;
+    }
+    .price-tag__amount {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+    .price-tag__note {
+      font-size: 13px;
+      color: var(--gray-400);
+    }
+    /* Contact form */
+    .contact-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .contact-form .full { grid-column: 1 / -1; }
+    @media (max-width: 600px) {
+      .contact-form { grid-template-columns: 1fr; }
+      .contact-form .full { grid-column: 1; }
+    }
+  </style>
+</head>
+<body class="page-offset">
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Xtra<span>Spain</span></a>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="diy.html">DIY Store</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="#contact" class="nav__cta">Get Started</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__num">Our Services</div>
+      <h1>Everything you need<br>to <em>move with confidence.</em></h1>
+      <p>From visa strategy to finding your apartment — hands-on support, expert connections, and no more guessing.</p>
+    </div>
+  </section>
+
+  <!-- SERVICE 01 — CONCIERGE -->
+  <section class="service-block" id="concierge">
+    <div class="container">
+      <div class="service-block__header">
+        <div class="service-block__num">01</div>
+        <div class="service-block__title">
+          <h2>Concierge Relocation Support</h2>
+          <p>Your personal relocation partner, from planning to landing. We map out your entire process, flag the pitfalls, and keep you on track from day one.</p>
+        </div>
+      </div>
+
+      <div style="max-width:800px; margin-left:104px;">
+        <ul class="includes-list">
+          <li>Visa pathway assessment & strategy</li>
+          <li>Pre-move timeline and checklist</li>
+          <li>NIE appointment booking support</li>
+          <li>Bank account opening guidance</li>
+          <li>Padrón registration walkthrough</li>
+          <li>Healthcare & social security setup</li>
+          <li>Neighbourhood & city comparison</li>
+          <li>Rental search strategy & red flags</li>
+          <li>School research (if applicable)</li>
+          <li>Post-arrival 30-day check-in call</li>
+        </ul>
+
+        <div style="display:flex; align-items:center; gap:32px; flex-wrap:wrap; margin-top:40px; padding-top:32px; border-top:1px solid var(--gray-200);">
+          <div class="price-tag">
+            <span class="price-tag__amount">From €490</span>
+            <span class="price-tag__note">/ per package</span>
+          </div>
+          <a href="#contact" class="btn btn--primary">Enquire Now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE 02 — Q&A -->
+  <section class="service-block" id="qa">
+    <div class="container">
+      <div class="service-block__header">
+        <div class="service-block__num">02</div>
+        <div class="service-block__title">
+          <h2>Expert Q&amp;A Sessions</h2>
+          <p>Got specific questions? Book a focused 60-minute call with a Spain relocation specialist and leave with a clear action plan.</p>
+        </div>
+      </div>
+
+      <div style="max-width:800px; margin-left:104px;">
+        <ul class="includes-list">
+          <li>60-minute video call (recorded on request)</li>
+          <li>Pre-session questionnaire to focus the call</li>
+          <li>Visa options & tax residency questions</li>
+          <li>Banking, insurance & healthcare queries</li>
+          <li>Written summary of key points after the call</li>
+          <li>Curated resource list tailored to your situation</li>
+        </ul>
+
+        <div style="display:flex; align-items:center; gap:32px; flex-wrap:wrap; margin-top:40px; padding-top:32px; border-top:1px solid var(--gray-200);">
+          <div class="price-tag">
+            <span class="price-tag__amount">€149</span>
+            <span class="price-tag__note">/ 60-minute session</span>
+          </div>
+          <a href="#contact" class="btn btn--primary">Book a Session →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE 03 — FAMILY -->
+  <section class="service-block" id="family">
+    <div class="container">
+      <div class="service-block__header">
+        <div class="service-block__num">03</div>
+        <div class="service-block__title">
+          <h2>Family Soft Landing Package</h2>
+          <p>Moving with a family is a different challenge. This package is designed around the real complexity of relocating with children, partners, and pets.</p>
+        </div>
+      </div>
+
+      <div style="max-width:800px; margin-left:104px;">
+        <ul class="includes-list">
+          <li>Everything in Concierge Support</li>
+          <li>International school research & comparisons</li>
+          <li>Local Spanish school enrolment guidance</li>
+          <li>Family healthcare registration support</li>
+          <li>Pet import requirements & vet referrals</li>
+          <li>Family-friendly neighbourhood shortlist</li>
+          <li>Spouse/partner work authorisation info</li>
+          <li>Expat community & social integration tips</li>
+          <li>90-day post-arrival support window</li>
+        </ul>
+
+        <div style="display:flex; align-items:center; gap:32px; flex-wrap:wrap; margin-top:40px; padding-top:32px; border-top:1px solid var(--gray-200);">
+          <div class="price-tag">
+            <span class="price-tag__amount">From €790</span>
+            <span class="price-tag__note">/ per family</span>
+          </div>
+          <a href="#contact" class="btn btn--primary">Enquire Now →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE 04 — NETWORK / COLLABORATORS -->
+  <section class="service-block" id="network">
+    <div class="container">
+      <div class="service-block__header">
+        <div class="service-block__num">04</div>
+        <div class="service-block__title">
+          <h2>Trusted Collaborator Network</h2>
+          <p>Access our vetted network of English-speaking professionals across Spain. We only recommend people we've worked with and trust — no directories, no cold calls.</p>
+        </div>
+      </div>
+
+      <div class="collab-grid">
+        <div class="collab-item">
+          <div class="collab-item__icon">⚖️</div>
+          <h4>Immigration Lawyers</h4>
+          <p>Specialists in non-lucrative, digital nomad, Golden Visa, and startup visas. English-speaking, fixed fees.</p>
+        </div>
+        <div class="collab-item">
+          <div class="collab-item__icon">📋</div>
+          <h4>Gestors & Tax Advisors</h4>
+          <p>Handle your NIE, Padrón, tax declarations (modelo 720, IRPF) and social security registration.</p>
+        </div>
+        <div class="collab-item">
+          <div class="collab-item__icon">🛡️</div>
+          <h4>Insurance Brokers</h4>
+          <p>Private health insurance, home contents, car insurance — all explained in English with options compared for you.</p>
+        </div>
+        <div class="collab-item">
+          <div class="collab-item__icon">🏠</div>
+          <h4>Property & Rental Agents</h4>
+          <p>Expat-savvy agents in Barcelona, Valencia, Seville, Madrid, and the Costa del Sol who won't waste your time.</p>
+        </div>
+        <div class="collab-item">
+          <div class="collab-item__icon">🏦</div>
+          <h4>Banking Specialists</h4>
+          <p>Guidance on opening Spanish bank accounts as a non-resident and managing international transfers.</p>
+        </div>
+        <div class="collab-item">
+          <div class="collab-item__icon">🚛</div>
+          <h4>International Movers</h4>
+          <p>Vetted removal companies for UK, US, and EU moves with transparent pricing and expat experience.</p>
+        </div>
+      </div>
+
+      <p style="margin-top:32px; font-size:14px; color:var(--gray-400);">
+        Collaborator referrals are included with all Concierge and Family packages. Available separately for Q&amp;A session clients.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT FORM -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div style="max-width:720px;">
+        <div class="label label--terra" style="margin-bottom:20px;">Get in Touch</div>
+        <h2 style="font-size:clamp(28px,4vw,44px); letter-spacing:-0.02em; margin-bottom:12px;">Book a free 20-minute intro call</h2>
+        <p style="font-size:16px; color:var(--gray-600); margin-bottom:40px;">Tell us a little about your situation and we'll get back to you within 24 hours to schedule a call.</p>
+
+        <form class="contact-form" name="contact" method="POST" action="https://api.web3forms.com/submit" id="contactForm">
+          <!-- Web3Forms -->
+          <input type="hidden" name="access_key" value="cb442741-3237-4845-bfca-eab8a0333817" />
+          <input type="hidden" name="subject" value="New enquiry — XtraSpain" />
+          <input type="hidden" name="from_name" value="XtraSpain Website" />
+          <!-- Honeypot spam protection -->
+          <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" autocomplete="off" />
+
+          <div class="form-group">
+            <label for="fname">First name</label>
+            <input type="text" id="fname" name="fname" placeholder="Jane" required />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last name</label>
+            <input type="text" id="lname" name="lname" placeholder="Smith" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="form-group">
+            <label for="country">Where are you currently based?</label>
+            <input type="text" id="country" name="country" placeholder="UK, USA, Ireland…" />
+          </div>
+          <div class="form-group full">
+            <label for="service">Which service are you interested in?</label>
+            <select id="service" name="service">
+              <option value="">Select a service…</option>
+              <option>Concierge Relocation Support</option>
+              <option>Expert Q&amp;A Session</option>
+              <option>Family Soft Landing Package</option>
+              <option>Not sure yet — need advice</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="message">Tell us about your move</label>
+            <textarea id="message" name="message" placeholder="Rough timeline, destination in Spain, main concerns…"></textarea>
+          </div>
+          <div class="full" style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
+            <button type="submit" class="btn btn--primary" id="submitBtn">Send Message →</button>
+            <p id="formStatus" style="font-size:14px; display:none;"></p>
+          </div>
+        </form>
+
+        <script>
+          const form = document.getElementById('contactForm');
+          const btn  = document.getElementById('submitBtn');
+          const status = document.getElementById('formStatus');
+
+          form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            btn.textContent = 'Sending…';
+            btn.disabled = true;
+
+            const res = await fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              body: new FormData(form)
+            });
+            const data = await res.json();
+
+            status.style.display = 'block';
+            if (data.success) {
+              status.style.color = 'var(--terra)';
+              status.textContent = '✓ Message sent! We\'ll be in touch within 24 hours.';
+              form.reset();
+              btn.textContent = 'Sent ✓';
+            } else {
+              status.style.color = '#c00';
+              status.textContent = 'Something went wrong — please email us directly at hello@xtraspain.com';
+              btn.textContent = 'Send Message →';
+              btn.disabled = false;
+            }
+          });
+        </script>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="nav__logo">Xtra<span>Spain</span></span>
+          <p style="margin-top:14px;">Relocation services and resources for English speakers making Spain their home.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#concierge">Concierge Support</a></li>
+            <li><a href="#qa">Expert Q&amp;A</a></li>
+            <li><a href="#family">Family Package</a></li>
+            <li><a href="#network">Collaborators</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="diy.html">DIY Store</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2025 XtraSpain. All rights reserved.</p>
+        <a href="mailto:hello@xtraspain.com">hello@xtraspain.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
