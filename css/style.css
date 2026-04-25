@@ -788,7 +788,7 @@ h1, h2, h3, h4 { font-family: var(--font-serif); line-height: 1.2; }
   margin-bottom: 32px;
 }
 
-.footer__brand .nav__logo { margin-bottom: 16px; display: block; }
+.footer__brand .nav__logo { margin-bottom: 16px; display: block; color: var(--white); }
 .footer__brand p { font-size: 13px; color: #666; line-height: 1.6; max-width: 280px; }
 
 .footer__col h4 {
