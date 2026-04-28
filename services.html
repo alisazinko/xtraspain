@@ -23,7 +23,7 @@
       {
         "@type": "Question",
         "name": "How much does a Spain relocation consultant cost?",
-        "acceptedAnswer": { "@type": "Answer", "text": "XtraSpain offers a 60-minute Expert Q&A session for €149, a Concierge Relocation package from €490, and a Family Soft Landing Package from €790. A free 20-minute intro call is available to all new enquiries." }
+        "acceptedAnswer": { "@type": "Answer", "text": "XtraSpain works in three steps: you submit a form describing your situation, Alisa reviews it and sends initial feedback by email, then you can book a paid Q&A consultation (€149) to go deeper. That consultation fee is deducted if you go on to hire a full service. Concierge packages start from €490 and Family Soft Landing from €790." }
       },
       {
         "@type": "Question",
@@ -311,8 +311,27 @@
     <div class="container">
       <div style="max-width:720px;">
         <div class="label label--terra" style="margin-bottom:20px;">Get in Touch</div>
-        <h2 style="font-size:clamp(28px,4vw,44px); letter-spacing:-0.02em; margin-bottom:12px;">Book a free 20-minute intro call</h2>
-        <p style="font-size:16px; color:var(--gray-600); margin-bottom:40px;">Tell us a little about your situation and we'll get back to you within 24 hours to schedule a call.</p>
+        <h2 style="font-size:clamp(28px,4vw,44px); letter-spacing:-0.02em; margin-bottom:16px;">Tell us your situation</h2>
+        <p style="font-size:16px; color:var(--gray-600); margin-bottom:12px;">Describe what you're dealing with and Alisa will review it personally. You'll receive initial feedback by email within 24-48 hours.</p>
+
+        <!-- How it works -->
+        <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--gray-200); border:1px solid var(--gray-200); margin-bottom:40px;">
+          <div style="background:var(--white); padding:20px 18px;">
+            <div style="font-size:11px; font-weight:500; color:var(--terra); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px;">Step 01</div>
+            <div style="font-size:14px; font-weight:500; margin-bottom:4px;">Describe your situation</div>
+            <div style="font-size:13px; color:var(--gray-600);">Fill in the form below with as much detail as you can.</div>
+          </div>
+          <div style="background:var(--white); padding:20px 18px;">
+            <div style="font-size:11px; font-weight:500; color:var(--terra); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px;">Step 02</div>
+            <div style="font-size:14px; font-weight:500; margin-bottom:4px;">Get initial feedback</div>
+            <div style="font-size:13px; color:var(--gray-600);">Alisa reviews your case and replies with honest first thoughts.</div>
+          </div>
+          <div style="background:var(--white); padding:20px 18px;">
+            <div style="font-size:11px; font-weight:500; color:var(--terra); letter-spacing:0.08em; text-transform:uppercase; margin-bottom:8px;">Step 03</div>
+            <div style="font-size:14px; font-weight:500; margin-bottom:4px;">Book a paid consultation</div>
+            <div style="font-size:13px; color:var(--gray-600);">Go deeper with a paid Q&amp;A session. That fee is deducted if you hire us.</div>
+          </div>
+        </div>
 
         <form class="contact-form" name="contact" method="POST" action="https://api.web3forms.com/submit" id="contactForm">
           <!-- Web3Forms -->
@@ -336,12 +355,12 @@
           </div>
           <div class="form-group">
             <label for="country">Where are you currently based?</label>
-            <input type="text" id="country" name="country" placeholder="UK, USA, Ireland…" />
+            <input type="text" id="country" name="country" placeholder="UK, USA, Ireland..." />
           </div>
           <div class="form-group full">
-            <label for="service">Which service are you interested in?</label>
+            <label for="service">Which service are you most interested in?</label>
             <select id="service" name="service">
-              <option value="">Select a service…</option>
+              <option value="">Select a service...</option>
               <option>Concierge Relocation Support</option>
               <option>Expert Q&amp;A Session</option>
               <option>Family Soft Landing Package</option>
@@ -349,11 +368,14 @@
             </select>
           </div>
           <div class="form-group full">
-            <label for="message">Tell us about your move</label>
-            <textarea id="message" name="message" placeholder="Rough timeline, destination in Spain, main concerns…"></textarea>
+            <label for="message">Describe your situation in detail <span style="color:var(--terra);">*</span></label>
+            <textarea id="message" name="message" placeholder="Where are you in the process? What visa are you considering? What is your timeline, destination, main concerns? The more detail you give, the more useful Alisa's feedback will be." style="min-height:160px;" required></textarea>
+          </div>
+          <div class="full">
+            <p style="font-size:13px; color:var(--gray-400); margin-bottom:20px;">By submitting this form you agree to be contacted by XtraSpain regarding your enquiry. We do not share your data with third parties.</p>
           </div>
           <div class="full" style="display:flex; align-items:center; gap:20px; flex-wrap:wrap;">
-            <button type="submit" class="btn btn--primary" id="submitBtn">Send Message →</button>
+            <button type="submit" class="btn btn--primary" id="submitBtn">Send My Situation →</button>
             <p id="formStatus" style="font-size:14px; display:none;"></p>
           </div>
         </form>
@@ -365,7 +387,7 @@
 
           form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            btn.textContent = 'Sending…';
+            btn.textContent = 'Sending...';
             btn.disabled = true;
 
             const res = await fetch('https://api.web3forms.com/submit', {
@@ -377,13 +399,13 @@
             status.style.display = 'block';
             if (data.success) {
               status.style.color = 'var(--terra)';
-              status.textContent = '✓ Message sent! We\'ll be in touch within 24 hours.';
+              status.textContent = 'Received. Alisa will review your situation and reply within 24-48 hours.';
               form.reset();
-              btn.textContent = 'Sent ✓';
+              btn.textContent = 'Sent';
             } else {
               status.style.color = '#c00';
-              status.textContent = 'Something went wrong - please email us directly at hello@xtraspain.com';
-              btn.textContent = 'Send Message →';
+              status.textContent = 'Something went wrong - please email us at hello@xtraspain.com';
+              btn.textContent = 'Send My Situation →';
               btn.disabled = false;
             }
           });
