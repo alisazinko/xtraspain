@@ -32,12 +32,12 @@
       {
         "@type": "Question",
         "name": "What does the XtraSpain Concierge Relocation package include?",
-        "acceptedAnswer": { "@type": "Answer", "text": "The Concierge Relocation package includes visa pathway assessment, NIE appointment support, bank account guidance, Padrón registration, private health insurance setup, neighbourhood comparison, rental search strategy, and up to 4 strategy calls per month. The monthly retainer is €400/month. A single strategy session is €99." }
+        "acceptedAnswer": { "@type": "Answer", "text": "The Concierge Relocation package includes visa pathway assessment, NIE appointment support, bank account guidance, Padrón registration, private health insurance setup, neighbourhood comparison, rental search strategy, and up to 4 strategy calls per month. The monthly retainer is €650/month. A single strategy session is €99, or €249 for a pack of 3 sessions." }
       },
       {
         "@type": "Question",
         "name": "How much does a Spain relocation consultant cost?",
-        "acceptedAnswer": { "@type": "Answer", "text": "XtraSpain services start at €99 for a 60-minute Expert Q&A session. The Concierge monthly retainer is €400/month. The Family Soft Landing Package starts from €790. You begin by describing your situation for free - Alisa reviews it and replies within 24-48 hours. Any paid consultation fee is deducted if you go on to hire a full service." }
+        "acceptedAnswer": { "@type": "Answer", "text": "XtraSpain services start at €99 for a 60-minute Expert Q&A session. The Concierge monthly retainer is €650/month. The Family Soft Landing Package starts from €790. You begin by describing your situation for free - Alisa reviews it and replies within 24-48 hours. Any paid consultation fee is deducted if you go on to hire a full service." }
       },
       {
         "@type": "Question",
@@ -234,7 +234,7 @@
 
         <!-- Pricing tiers -->
         <h3 style="font-size:18px; font-weight:500; margin-bottom:20px; letter-spacing:-0.01em;">Pricing &amp; options</h3>
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--gray-200); border:1px solid var(--gray-200); margin-bottom:32px;">
+        <div id="pricing-grid" style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:1px; background:var(--gray-200); border:1px solid var(--gray-200); margin-bottom:32px;">
           <!-- Single session -->
           <div style="background:var(--white); padding:32px 28px;">
             <div class="label" style="color:var(--gray-400); margin-bottom:12px;">Single session</div>
@@ -247,10 +247,23 @@
             </ul>
             <a href="#contact" class="btn btn--outline" style="width:100%; justify-content:center;">Book a Session →</a>
           </div>
+          <!-- Pack: 3 sessions -->
+          <div style="background:var(--white); padding:32px 28px; border-left:1px solid var(--gray-200);">
+            <div class="label" style="color:var(--gray-400); margin-bottom:12px;">Pack · 3 sessions</div>
+            <div style="font-family:var(--font-serif); font-size:40px; font-weight:500; letter-spacing:-0.03em; line-height:1; margin-bottom:6px;">€249</div>
+            <p style="font-size:13px; color:var(--gray-600); margin-bottom:20px; line-height:1.5;">Three focused strategy calls. Use them over 60 days at your own pace.</p>
+            <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; margin-bottom:24px;">
+              <li style="font-size:13px; color:var(--gray-600); display:flex; gap:8px;"><span style="color:var(--terra);">→</span> Everything in Single Session × 3</li>
+              <li style="font-size:13px; color:var(--gray-600); display:flex; gap:8px;"><span style="color:var(--terra);">→</span> Written summary after each call</li>
+              <li style="font-size:13px; color:var(--gray-600); display:flex; gap:8px;"><span style="color:var(--terra);">→</span> Priority booking (within 5 days)</li>
+              <li style="font-size:13px; color:var(--gray-600); display:flex; gap:8px;"><span style="color:var(--terra);">→</span> Email follow-up between sessions</li>
+            </ul>
+            <a href="#contact" class="btn btn--outline" style="width:100%; justify-content:center;">Book the Pack →</a>
+          </div>
           <!-- Monthly retainer -->
           <div style="background:var(--black); padding:32px 28px;">
             <div class="label" style="color:#666; margin-bottom:12px;">Monthly retainer</div>
-            <div style="font-family:var(--font-serif); font-size:40px; font-weight:500; letter-spacing:-0.03em; line-height:1; color:var(--white); margin-bottom:6px;">€400<span style="font-size:16px; color:#666; font-family:var(--font-sans); font-weight:400;">/month</span></div>
+            <div style="font-family:var(--font-serif); font-size:40px; font-weight:500; letter-spacing:-0.03em; line-height:1; color:var(--white); margin-bottom:6px;">€650<span style="font-size:16px; color:#666; font-family:var(--font-sans); font-weight:400;">/month</span></div>
             <p style="font-size:13px; color:#888; margin-bottom:20px; line-height:1.5;">Cancel anytime. Secure checkout via Stripe.</p>
             <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; margin-bottom:24px;">
               <li style="font-size:13px; color:#aaa; display:flex; gap:8px;"><span style="color:var(--terra);">→</span> Unlimited WhatsApp &amp; email support (sub-24h)</li>
@@ -262,8 +275,9 @@
           </div>
         </div>
         <style>
-          @media (max-width:600px) {
-            #concierge [style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; }
+          @media (max-width:720px) {
+            #pricing-grid { grid-template-columns: 1fr !important; }
+            #pricing-grid > div { border-left: none !important; border-top: 1px solid var(--gray-200); }
           }
         </style>
 
