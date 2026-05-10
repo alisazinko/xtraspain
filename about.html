@@ -89,23 +89,52 @@
     </div>
   </section>
 
+  <style>
+    .bio-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 80px;
+      align-items: center;
+    }
+    .bio-grid__photo {
+      position: relative;
+    }
+    .bio-grid__photo img {
+      width: 100%;
+      display: block;
+      border-radius: 2px;
+      object-fit: cover;
+      aspect-ratio: 3/4;
+    }
+    @media (max-width: 860px) {
+      .bio-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+      .bio-grid__photo {
+        max-width: 340px;
+      }
+    }
+  </style>
+
   <!-- ALISA BIO -->
   <section class="section">
     <div class="container">
-      <div class="about-strip">
-        <div class="about-strip__text">
+      <div class="bio-grid">
+        <div>
           <div class="label label--terra" style="margin-bottom:20px;">Meet Alisa</div>
-          <h2>Licensed Immigration Professional.<br>Spain since 2001.</h2>
-          <p>I moved to Spain from Russia in 2001, navigating the long road from my first residency permit to full Spanish citizenship. That process taught me everything the official guides leave out - the real timelines, the right contacts, and how to work with a system that does not always work with you.</p>
-          <p>Since 2008 I have worked as an immigration consultant, and in 2022 I became a Licensed Immigration Professional. What sets XtraSpain apart is not just the credentials - it is the lived experience behind every piece of advice I give.</p>
-          <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:28px;">
+          <h2 style="font-size:clamp(26px,3.5vw,40px); letter-spacing:-0.02em; line-height:1.2; margin-bottom:24px;">Licensed Immigration Professional.<br>Spain since 2001.</h2>
+          <p style="font-size:17px; line-height:1.75; color:#333; margin-bottom:20px;">I moved to Spain in 2001, navigating the long road from my first residency permit to full citizenship. Since 2008, I have served as an immigration consultant, further solidifying my expertise in 2022 as a Licensed Immigration Professional.</p>
+          <p style="font-size:17px; line-height:1.75; color:#333; margin-bottom:20px;">Spain is a "country of countries." Having lived in Barcelona, Zaragoza, Marbella, the Canary Islands, and Malaga, I understand firsthand that every region has its own management style and unique vibe.</p>
+          <p style="font-size:17px; line-height:1.75; color:#333; margin-bottom:32px;">As a mother of two, my most personal victory has been navigating Special Education (Autism) - a journey that taught me how to unlock the system for my own children and now for the families I represent. I don't just offer legal advice; I offer a lifeline. I've helped dozens of individuals and families find their place here, and I'm ready to help you find yours.</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
             <span class="badge badge--terra">Licensed since 2022</span>
             <span class="badge badge--outline">Consulting since 2008</span>
             <span class="badge badge--outline">In Spain since 2001</span>
           </div>
         </div>
-        <div class="about-strip__image">
-          <div class="placeholder-image">🌞</div>
+        <div class="bio-grid__photo">
+          <img src="alisa-color.png" alt="Alisa Zinko - Licensed Immigration Professional, XtraSpain" />
         </div>
       </div>
     </div>
