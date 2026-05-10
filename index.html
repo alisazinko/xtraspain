@@ -189,6 +189,15 @@
     "url": "https://xtraspain.com/"
   }
   </script>
+  <!-- MailerLite Universal -->
+  <script>
+  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+  .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+  n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+  (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+  ml('account', '2156119');
+  </script>
+  <!-- End MailerLite Universal -->
 </head>
 <body class="page-offset">
 
@@ -452,14 +461,33 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <!-- MailerLite Universal -->
+
+  <!-- Sticky Subscribe Banner -->
+  <div id="ml-sticky-banner" role="complementary" aria-label="Newsletter signup">
+    <p class="banner-text"><strong>📩 Free Spain Relocation Checklist</strong> — used by 500+ expats</p>
+    <div class="banner-form">
+      <div class="ml-embedded" data-form="qVvq66"></div>
+    </div>
+    <button id="ml-sticky-close" aria-label="Close newsletter banner">✕</button>
+  </div>
   <script>
-  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-  .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-  n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-  (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-  ml('account', '2156119');
+  (function () {
+    var STORAGE_KEY = 'ml_banner_dismissed';
+    var banner = document.getElementById('ml-sticky-banner');
+    var closeBtn = document.getElementById('ml-sticky-close');
+
+    if (localStorage.getItem(STORAGE_KEY)) return; // already dismissed — never show again
+
+    var timer = setTimeout(function () {
+      banner.classList.add('is-visible');
+    }, 5000);
+
+    closeBtn.addEventListener('click', function () {
+      banner.classList.remove('is-visible');
+      clearTimeout(timer);
+      localStorage.setItem(STORAGE_KEY, '1');
+    });
+  })();
   </script>
-  <!-- End MailerLite Universal -->
 </body>
 </html>

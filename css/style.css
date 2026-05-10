@@ -916,3 +916,68 @@ h1, h2, h3, h4 { font-family: var(--font-serif); line-height: 1.2; }
 .badge--terra { background: rgba(177,101,91,0.1); color: var(--terra); }
 .badge--black { background: var(--black); color: var(--white); }
 .badge--outline { border: 1px solid var(--gray-200); color: var(--gray-600); }
+
+/* --- Lead Capture Card --- */
+.lead-capture {
+  max-width: 520px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  text-align: center;
+}
+.lead-capture h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: #B56B5F;
+  margin-bottom: 0.5rem;
+}
+.lead-capture p {
+  font-size: 0.9rem;
+  color: var(--gray-600);
+  margin-bottom: 1.25rem;
+}
+
+/* --- Sticky Subscribe Banner --- */
+#ml-sticky-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border-top: 1px solid #e5e5e5;
+  box-shadow: 0 -4px 24px rgba(0,0,0,0.10);
+  z-index: 9999;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  transform: translateY(100%);
+  transition: transform 0.4s cubic-bezier(0.22,1,0.36,1);
+}
+#ml-sticky-banner.is-visible { transform: translateY(0); }
+#ml-sticky-banner .banner-text { font-size: 0.9rem; color: var(--gray-600); white-space: nowrap; }
+#ml-sticky-banner .banner-text strong { color: var(--black); }
+#ml-sticky-banner .banner-form { flex: 1; min-width: 240px; max-width: 380px; }
+#ml-sticky-close {
+  position: absolute;
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+  color: var(--gray-400);
+  line-height: 1;
+  padding: 4px 8px;
+  transition: color 0.15s;
+}
+#ml-sticky-close:hover { color: var(--black); }
+@media (max-width: 600px) {
+  #ml-sticky-banner { flex-direction: column; align-items: stretch; gap: 0.75rem; padding: 1rem; }
+  #ml-sticky-banner .banner-text { white-space: normal; }
+  #ml-sticky-close { top: 0.75rem; transform: none; }
+}
