@@ -805,6 +805,38 @@ h1, h2, h3, h4 { font-family: var(--font-serif); line-height: 1.2; }
 .footer__col a { font-size: 14px; color: #888; transition: color 0.2s; }
 .footer__col a:hover { color: var(--white); }
 
+.footer__subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 40px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  margin-bottom: 48px;
+  flex-wrap: wrap;
+}
+.footer__subscribe h4 {
+  font-family: var(--font-serif);
+  font-size: 20px;
+  color: var(--white);
+  letter-spacing: -0.01em;
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+.footer__subscribe p {
+  font-size: 13px;
+  color: #666;
+}
+.footer__subscribe .ml-embedded {
+  flex: 1;
+  min-width: 260px;
+  max-width: 420px;
+}
+@media (max-width: 700px) {
+  .footer__subscribe { flex-direction: column; align-items: flex-start; }
+  .footer__subscribe .ml-embedded { width: 100%; max-width: 100%; }
+}
+
 .footer__bottom {
   display: flex;
   justify-content: space-between;
