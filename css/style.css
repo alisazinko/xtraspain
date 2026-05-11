@@ -709,6 +709,13 @@ h1, h2, h3, h4 { font-family: var(--font-serif); line-height: 1.2; }
 .post-body strong { color: var(--black); font-weight: 600; }
 .post-body a { color: var(--terra); border-bottom: 1px solid transparent; transition: border-color 0.2s; }
 .post-body a:hover { border-bottom-color: var(--terra); }
+.post-body hr { border: none; border-top: 1px solid var(--gray-200); margin: 40px 0; }
+.post-body table { width: 100%; border-collapse: collapse; margin-bottom: 28px; font-size: 15px; }
+.post-body table th { text-align: left; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--gray-400); border-bottom: 1px solid var(--gray-200); padding: 10px 14px; }
+.post-body table td { padding: 12px 14px; border-bottom: 1px solid var(--gray-200); color: #333; vertical-align: top; line-height: 1.5; }
+.post-body table tr:last-child td { border-bottom: none; }
+.post-body table tr:nth-child(even) td { background: var(--gray-100); }
+@media (max-width: 640px) { .post-body table { display: block; overflow-x: auto; -webkit-overflow-scrolling: touch; } }
 
 /* ============================================
    PAGE HERO (inner pages)
