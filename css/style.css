@@ -3,7 +3,7 @@
    Colors: #0A0A0A · #FFFFFF · #B1655B (terracotta)
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+/* Fonts loaded via <link> in HTML for faster rendering — see each page's <head> */
 
 /* --- Reset & Base --- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
