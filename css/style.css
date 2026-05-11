@@ -283,6 +283,16 @@ h1, h2, h3, h4 { font-family: var(--font-serif); line-height: 1.2; }
   background: #bf9748;
 }
 
+.btn--concierge {
+  background: #B56B5F;
+  color: var(--white);
+  border: none;
+}
+
+.btn--concierge:hover {
+  background: #a25f54;
+}
+
 .btn--link {
   padding: 0;
   font-size: 14px;
