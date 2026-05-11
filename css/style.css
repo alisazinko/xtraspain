@@ -461,17 +461,7 @@ h1, h2, h3, h4 { font-family: var(--font-serif); line-height: 1.2; }
   position: relative;
 }
 
-.about-strip__image::after {
-  content: 'España';
-  position: absolute;
-  bottom: 20px; right: 20px;
-  font-family: var(--font-serif);
-  font-size: 13px;
-  color: var(--white);
-  background: rgba(0,0,0,0.4);
-  padding: 4px 10px;
-  border-radius: 2px;
-}
+
 
 .placeholder-image {
   width: 100%;
