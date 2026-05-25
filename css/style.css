@@ -979,7 +979,6 @@ h1, h2, h3, h4 { font-family: var(--font-serif); line-height: 1.2; }
 #ml-sticky-banner.is-visible { transform: translateY(0); }
 #ml-sticky-banner .banner-text { font-size: 0.9rem; color: var(--gray-600); white-space: nowrap; }
 #ml-sticky-banner .banner-text strong { color: var(--black); }
-#ml-sticky-banner .banner-form { flex: 1; min-width: 240px; max-width: 380px; }
 #ml-sticky-close {
   position: absolute;
   top: 50%;
