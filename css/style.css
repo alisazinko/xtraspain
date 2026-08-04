@@ -264,13 +264,14 @@ h1, h2, h3, h4 { font-family: var(--font-serif); line-height: 1.2; }
 
 .btn--terra {
   background: var(--terra);
-  color: var(--white);
+  color: #fff !important;
   border: 1.5px solid var(--terra);
 }
 
 .btn--terra:hover {
-  background: #9b4f45;
-  border-color: #9b4f45;
+  background: #8e4039;
+  border-color: #8e4039;
+  color: #fff !important;
 }
 
 .btn--gold {
