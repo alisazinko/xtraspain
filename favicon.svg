@@ -1,4 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="18" fill="#1a1a1a"/>
-  <text x="50" y="72" font-family="Georgia, 'Times New Roman', serif" font-size="68" font-weight="400" fill="#B1655B" text-anchor="middle" letter-spacing="-2">X</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+  <!-- X -->
+  <text x="-10" y="390" font-family="Arial Black, Impact, sans-serif" font-size="420" font-weight="900" fill="#B5655A" opacity="1">x</text>
+  <!-- S overlapping -->
+  <text x="185" y="380" font-family="Georgia, 'Times New Roman', serif" font-size="380" font-weight="900" fill="#B5655A">S</text>
+  <!-- XTRA SPAIN small text -->
+  <text x="178" y="455" font-family="Arial, sans-serif" font-size="46" font-weight="600" fill="#B5655A" letter-spacing="6">XTRA SPAIN</text>
 </svg>
