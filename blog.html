@@ -23,7 +23,7 @@
   <meta name="twitter:image" content="https://xtraspain.com/fotos founder/XtraSpain.png" />
   <link rel="canonical" href="https://xtraspain.com/blog.html" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap">
   <link rel="stylesheet" href="css/style.css" />
@@ -48,13 +48,10 @@
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">Xtra<span>Spain</span></a>
       <ul class="nav__links">
-        <li><a href="index.html">Home</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="diy.html">Guides</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="services.html">Services</a></li>
-        <li><a href="business.html">For Companies</a></li>
-        <li><a href="diy.html">DIY Store</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="services.html#contact" class="nav__cta">Get Started</a></li>
       </ul>
       <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -67,97 +64,81 @@
     <div class="container">
       <div class="page-hero__num">The XtraSpain Blog</div>
       <h1>Honest advice for<br><em>life in Spain.</em></h1>
-      <p>No fluff. Practical guides, bureaucracy breakdowns, and real expat stories for English speakers navigating Spanish life.</p>
+      <p>Practical guides, bureaucracy breakdowns, and real expat information. No fluff.</p>
     </div>
   </section>
 
-  <!-- FEATURED POST -->
-  <section class="section--sm">
+  <!-- CATEGORY FILTER -->
+  <div class="section--sm" style="padding-bottom:0;">
     <div class="container">
-      <div class="label label--terra" style="margin-bottom:24px;">Featured</div>
-      <a href="blog/moving-to-spain-checklist.html" style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:center; text-decoration:none; color:inherit; padding-bottom:64px; border-bottom:1px solid var(--gray-200);">
-        <div>
-          <div class="blog-card__cat" style="margin-bottom:14px;">Relocation</div>
-          <h2 style="font-size:clamp(26px,3.5vw,40px); letter-spacing:-0.02em; line-height:1.2; margin-bottom:16px;">The Ultimate Moving to Spain Checklist (2026)</h2>
-          <p style="font-size:16px; color:var(--gray-600); line-height:1.7; margin-bottom:24px;">Everything you need to do before, during, and after your move - from cancelling UK/US services to registering on the Padrón. The most comprehensive checklist for English-speaking expats.</p>
-          <span class="btn--link" style="font-size:14px; color:var(--terra); display:inline-flex; align-items:center; gap:6px;">Read article →</span>
-        </div>
-        <div style="aspect-ratio:16/10; border-radius:2px; overflow:hidden;">
-          <img src="fotos varias web/expat_families_in_spain.jpg" alt="Moving to Spain - plane over palm trees" style="width:100%; height:100%; object-fit:cover; display:block;" />
-        </div>
-      </a>
-      <style>
-        @media (max-width:700px) {
-          a[href="blog/moving-to-spain-checklist.html"] { grid-template-columns:1fr !important; }
-          a[href="blog/moving-to-spain-checklist.html"] > div:last-child { order:-1; }
-        }
-      </style>
+      <div class="cat-pills-row" id="cat-filter" role="tablist" aria-label="Filter articles by category">
+        <button class="cat-pill cat-pill--active" data-filter="all" role="tab" aria-selected="true">All</button>
+        <button class="cat-pill" data-filter="visas" role="tab" aria-selected="false">Visas &amp; Admin</button>
+        <button class="cat-pill" data-filter="relocation" role="tab" aria-selected="false">Relocation</button>
+        <button class="cat-pill" data-filter="healthcare" role="tab" aria-selected="false">Healthcare</button>
+        <button class="cat-pill" data-filter="cities" role="tab" aria-selected="false">By City</button>
+        <button class="cat-pill" data-filter="tax" role="tab" aria-selected="false">Tax</button>
+        <button class="cat-pill" data-filter="housing" role="tab" aria-selected="false">Housing</button>
+        <button class="cat-pill" data-filter="families" role="tab" aria-selected="false">Families</button>
+      </div>
+      <p id="no-results" hidden style="padding:48px 0; color:var(--gray-400); font-size:15px;">No articles in this category yet. Check back soon.</p>
     </div>
-  </section>
+  </div>
 
-  <!-- ALL POSTS -->
+  <!-- ALL ARTICLES -->
   <section class="section">
     <div class="container">
-      <div class="section-header">
-        <h2>All articles</h2>
-      </div>
+      <div class="blog-grid" id="article-grid">
 
-      <div class="blog-grid" style="margin-top:48px;">
-        <a href="blog/moving-to-spain-first-steps.html" class="blog-card">
+        <a href="blog/moving-to-spain-first-steps.html" class="blog-card" data-cat="relocation">
           <div class="blog-card__cat">Relocation</div>
           <h3>Where to Start When Moving to Spain: Your First Practical Steps</h3>
           <p class="blog-card__excerpt">Visa path, apostilles, sworn translations, NIE, empadronamiento, TIE, and tax residency. The correct order, explained clearly.</p>
           <div class="blog-card__meta">August 2026 · 8 min read</div>
         </a>
-        <a href="blog/healthcare-spain-expats.html" class="blog-card">
+
+        <a href="blog/healthcare-spain-expats.html" class="blog-card" data-cat="healthcare">
           <div class="blog-card__cat">Healthcare</div>
           <h3>Public vs. Private Healthcare in Spain: What Expats Need to Know</h3>
           <p class="blog-card__excerpt">Breaking down the Spanish healthcare system, how to register for the public system, and whether private insurance is worth it.</p>
           <div class="blog-card__meta">May 2026 · 9 min read</div>
         </a>
-        <a href="blog/non-lucrative-visa-spain-2026.html" class="blog-card">
-          <div class="blog-card__cat">Visas &amp; Legal</div>
+
+        <a href="blog/non-lucrative-visa-spain-2026.html" class="blog-card" data-cat="visas">
+          <div class="blog-card__cat">Visas &amp; Admin</div>
           <h3>Spain's Non-Lucrative Visa 2026: Complete Guide</h3>
-          <p class="blog-card__excerpt">Everything you need to know — income requirements, documents, process, and who it's right for.</p>
+          <p class="blog-card__excerpt">Income requirements, documents, process, and who the NLV is right for.</p>
           <div class="blog-card__meta">May 2026 · 10 min read</div>
         </a>
 
-        <a href="blog/how-to-get-nie-spain.html" class="blog-card">
-          <div class="blog-card__cat">Admin &amp; Bureaucracy</div>
+        <a href="blog/digital-nomad-visa-spain-2026.html" class="blog-card" data-cat="visas">
+          <div class="blog-card__cat">Visas &amp; Admin</div>
+          <h3>Spain's Digital Nomad Visa: Is It Worth It in 2026?</h3>
+          <p class="blog-card__excerpt">Requirements, Beckham Law, who qualifies, and who should choose a different route.</p>
+          <div class="blog-card__meta">May 2026 · 9 min read</div>
+        </a>
+
+        <a href="blog/how-to-get-nie-spain.html" class="blog-card" data-cat="visas">
+          <div class="blog-card__cat">Visas &amp; Admin</div>
           <h3>How to Get Your NIE Number in Spain: Step by Step</h3>
-          <p class="blog-card__excerpt">The NIE is your key to everything in Spain - opening a bank account, buying a car, signing a lease. Here's exactly how to get it, whichever route you take.</p>
+          <p class="blog-card__excerpt">Which appointment, which forms, what to bring, and what happens if they say no.</p>
           <div class="blog-card__meta">March 2026 · 6 min read</div>
         </a>
 
-        <a href="blog/best-cities-expats-spain.html" class="blog-card">
-          <div class="blog-card__cat">Lifestyle</div>
+        <a href="blog/best-cities-expats-spain.html" class="blog-card" data-cat="cities">
+          <div class="blog-card__cat">By City</div>
           <h3>Best Cities in Spain for English-Speaking Expats in 2026</h3>
-          <p class="blog-card__excerpt">Barcelona, Valencia, Seville, or the Costa? We break down the pros, cons, cost of living, and expat scenes of Spain's top destinations.</p>
+          <p class="blog-card__excerpt">Barcelona, Valencia, Seville, or the Costa? Pros, cons, cost of living, and expat scenes compared.</p>
           <div class="blog-card__meta">February 2026 · 10 min read</div>
         </a>
 
-        <a href="blog/moving-to-spain-checklist.html" class="blog-card">
+        <a href="blog/moving-to-spain-checklist.html" class="blog-card" data-cat="relocation">
           <div class="blog-card__cat">Relocation</div>
           <h3>The Ultimate Moving to Spain Checklist (2026)</h3>
-          <p class="blog-card__excerpt">Every task you need to complete before, during, and after your move. From cancelling direct debits to getting your Padrón certificate.</p>
+          <p class="blog-card__excerpt">Every task before, during, and after your move. From cancelling direct debits to your Padron certificate.</p>
           <div class="blog-card__meta">April 2026 · 8 min read</div>
         </a>
 
-        <!-- Placeholder future posts -->
-        <div class="blog-card" style="opacity:0.4; cursor:default;">
-          <div class="blog-card__cat">Visas</div>
-          <h3>Spain's Digital Nomad Visa: Is It Worth It in 2026?</h3>
-          <p class="blog-card__excerpt">A honest look at the requirements, the process, and who the DNV actually makes sense for - and who should choose a different route.</p>
-          <div class="blog-card__meta">Coming soon</div>
-        </div>
-
-
-        <div class="blog-card" style="opacity:0.4; cursor:default;">
-          <div class="blog-card__cat">Finance</div>
-          <h3>Opening a Bank Account in Spain as a Non-Resident</h3>
-          <p class="blog-card__excerpt">Which banks accept non-residents, what documents you'll need, and the best accounts for expats managing money across borders.</p>
-          <div class="blog-card__meta">Coming soon</div>
-        </div>
       </div>
     </div>
   </section>
@@ -165,10 +146,10 @@
   <!-- NEWSLETTER -->
   <section class="section section--gray">
     <div class="container" style="max-width:600px;">
-      <div class="label label--terra" style="margin-bottom:20px;">Stay in the loop</div>
-      <h2 style="font-size:clamp(26px,3.5vw,38px); letter-spacing:-0.02em; margin-bottom:12px;">New guides, direct to your inbox.</h2>
-      <p style="font-size:15px; color:var(--gray-600); margin-bottom:32px;">No spam. One email when we publish something worth reading - practical, Spain-specific, and always in English.</p>
-      <a href="https://xtraspain.kit.com/2abadd9468" target="_blank" rel="noopener" class="btn btn--terra" style="margin-top:8px; display:inline-block;">Download Free Guide →</a>
+      <div class="label label--terra" style="margin-bottom:20px;">Free Download</div>
+      <h2 style="font-size:clamp(26px,3.5vw,38px); letter-spacing:-0.02em; margin-bottom:12px;">Start with the free guide.</h2>
+      <p style="font-size:15px; color:var(--gray-600); margin-bottom:32px;">The Complete Move to Spain Guide. Used by 100+ expats. No signup required.</p>
+      <a href="https://xtraspain.kit.com/2abadd9468" target="_blank" rel="noopener" class="btn btn--terra" style="display:inline-block;">Download Free Guide →</a>
     </div>
   </section>
 
@@ -178,23 +159,24 @@
       <div class="footer__grid">
         <div class="footer__brand">
           <span class="nav__logo">Xtra<span>Spain</span></span>
-          <p style="margin-top:14px;">Relocation services and resources for English speakers making Spain their home.</p>
+          <p style="margin-top:14px;">Practical guides and relocation resources for English speakers making Spain their home.</p>
         </div>
         <div class="footer__col">
-          <h4>Services</h4>
+          <h4>Guides</h4>
           <ul>
-            <li><a href="services.html#concierge">Concierge Support</a></li>
-            <li><a href="services.html#qa">Expert Q&amp;A</a></li>
-            <li><a href="services.html#family">Family Package</a></li>
-            <li><a href="services.html#network">Collaborators</a></li>
+            <li><a href="blog.html?cat=visas">Visas &amp; Admin</a></li>
+            <li><a href="blog.html?cat=relocation">Relocation</a></li>
+            <li><a href="blog.html?cat=healthcare">Healthcare</a></li>
+            <li><a href="blog.html?cat=cities">By City</a></li>
           </ul>
         </div>
         <div class="footer__col">
           <h4>Resources</h4>
           <ul>
-            <li><a href="diy.html">DIY Store</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="about.html">About Us</a></li>
+            <li><a href="diy.html">Free Guides</a></li>
+            <li><a href="blog.html">All Articles</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">1:1 Services</a></li>
           </ul>
         </div>
         <div class="footer__col">
@@ -214,12 +196,67 @@
         <a href="https://xtraspain.kit.com/2abadd9468" target="_blank" rel="noopener" class="btn btn--terra">Download Free Guide →</a>
       </div>
       <div class="footer__bottom">
-        <p>© 2026 XtraSpain. All rights reserved.</p>
+        <p>&copy; 2026 XtraSpain. All rights reserved.</p>
         <a href="mailto:hello@xtraspain.com">hello@xtraspain.com</a>
       </div>
     </div>
   </footer>
 
   <script src="js/main.js"></script>
+
+  <script>
+  (function () {
+    var pills = document.querySelectorAll('#cat-filter .cat-pill');
+    var cards = document.querySelectorAll('#article-grid .blog-card');
+    var noResults = document.getElementById('no-results');
+
+    function applyFilter(cat) {
+      var visible = 0;
+      cards.forEach(function (card) {
+        var matches = cat === 'all' || card.dataset.cat === cat;
+        card.hidden = !matches;
+        if (matches) visible++;
+      });
+      noResults.hidden = visible > 0;
+      pills.forEach(function (btn) {
+        var active = btn.dataset.filter === cat;
+        btn.classList.toggle('cat-pill--active', active);
+        btn.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      var url = new URL(window.location.href);
+      if (cat === 'all') { url.searchParams.delete('cat'); }
+      else { url.searchParams.set('cat', cat); }
+      history.replaceState(null, '', url.toString());
+    }
+
+    pills.forEach(function (btn) {
+      btn.addEventListener('click', function () { applyFilter(btn.dataset.filter); });
+    });
+
+    var initial = new URLSearchParams(window.location.search).get('cat') || 'all';
+    applyFilter(initial);
+  })();
+  </script>
+
+  <!-- Sticky Download Banner -->
+  <div id="ml-sticky-banner" role="complementary" aria-label="Free guide download">
+    <p class="banner-text"><strong>Free Spain Relocation Guide</strong> — used by 100+ expats</p>
+    <a href="https://xtraspain.kit.com/2abadd9468" target="_blank" rel="noopener" class="btn btn--terra" style="white-space:nowrap; padding:0.65rem 1.5rem; font-size:0.9rem;">Download Free →</a>
+    <button id="ml-sticky-close" aria-label="Close banner">✕</button>
+  </div>
+  <script>
+  (function () {
+    var STORAGE_KEY = 'ml_banner_dismissed';
+    var banner = document.getElementById('ml-sticky-banner');
+    var closeBtn = document.getElementById('ml-sticky-close');
+    if (localStorage.getItem(STORAGE_KEY)) return;
+    var timer = setTimeout(function () { banner.classList.add('is-visible'); }, 6000);
+    closeBtn.addEventListener('click', function () {
+      banner.classList.remove('is-visible');
+      clearTimeout(timer);
+      localStorage.setItem(STORAGE_KEY, '1');
+    });
+  })();
+  </script>
 </body>
 </html>

@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ============================================================
+       TEMPLATE: Copy this file for each new article.
+       Fill in the ALL-CAPS placeholders below.
+       ============================================================ -->
+
+  <title>ARTICLE TITLE | XtraSpain</title>
+  <meta name="description" content="ARTICLE META DESCRIPTION (150-160 chars)." />
+  <meta name="keywords" content="KEYWORD 1, KEYWORD 2, KEYWORD 3" />
+  <meta name="author" content="Alisa Zinko, XtraSpain" />
+  <meta name="geo.region" content="ES" />
+
+  <meta property="og:title" content="ARTICLE TITLE | XtraSpain" />
+  <meta property="og:description" content="ARTICLE META DESCRIPTION." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://xtraspain.com/blog/ARTICLE-SLUG.html" />
+  <meta property="og:image" content="https://xtraspain.com/fotos varias web/IMAGE-FILE.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@xtraspain" />
+  <meta name="twitter:title" content="ARTICLE TITLE | XtraSpain" />
+  <meta name="twitter:description" content="ARTICLE META DESCRIPTION." />
+  <meta name="twitter:image" content="https://xtraspain.com/fotos varias web/IMAGE-FILE.jpg" />
+  <link rel="canonical" href="https://xtraspain.com/blog/ARTICLE-SLUG.html" />
+  <link rel="sitemap" type="application/xml" href="../sitemap.xml" />
+
+  <!-- Article + FAQ schema. Update every field. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "ARTICLE TITLE",
+    "description": "ARTICLE META DESCRIPTION.",
+    "author": { "@type": "Person", "name": "Alisa Zinko", "url": "https://xtraspain.com/about.html" },
+    "publisher": { "@type": "Organization", "name": "XtraSpain", "url": "https://xtraspain.com", "logo": { "@type": "ImageObject", "url": "https://xtraspain.com/favicon.svg" } },
+    "datePublished": "2026-MM-DD",
+    "dateModified": "2026-MM-DD",
+    "url": "https://xtraspain.com/blog/ARTICLE-SLUG.html",
+    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://xtraspain.com/blog/ARTICLE-SLUG.html" },
+    "image": "https://xtraspain.com/fotos varias web/IMAGE-FILE.jpg",
+    "articleSection": "CATEGORY",
+    "inLanguage": "en",
+    "about": { "@type": "Place", "name": "Spain", "addressCountry": "ES" }
+  }
+  </script>
+
+  <!-- FAQ schema: 3-6 Q&As, answers in plain prose, 50-120 words each.
+       These appear directly in Google/AI search results. -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "FAQ QUESTION 1?",
+        "acceptedAnswer": { "@type": "Answer", "text": "FAQ ANSWER 1." }
+      },
+      {
+        "@type": "Question",
+        "name": "FAQ QUESTION 2?",
+        "acceptedAnswer": { "@type": "Answer", "text": "FAQ ANSWER 2." }
+      },
+      {
+        "@type": "Question",
+        "name": "FAQ QUESTION 3?",
+        "acceptedAnswer": { "@type": "Answer", "text": "FAQ ANSWER 3." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://xtraspain.com" },
+      { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://xtraspain.com/blog.html" },
+      { "@type": "ListItem", "position": 3, "name": "ARTICLE TITLE", "item": "https://xtraspain.com/blog/ARTICLE-SLUG.html" }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body class="page-offset">
+
+  <!-- NAV -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="../index.html" class="nav__logo">Xtra<span>Spain</span></a>
+      <ul class="nav__links">
+        <li><a href="../blog.html">Blog</a></li>
+        <li><a href="../diy.html">Guides</a></li>
+        <li><a href="../about.html">About</a></li>
+        <li><a href="../services.html">Services</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HEADER -->
+  <header class="article-header">
+    <div class="container">
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span aria-hidden="true">›</span>
+        <a href="../blog.html">Blog</a>
+        <span aria-hidden="true">›</span>
+        <span>ARTICLE TITLE (short)</span>
+      </nav>
+
+      <!-- Category -->
+      <div class="blog-card__cat" style="margin-bottom:16px;">CATEGORY</div>
+
+      <h1>ARTICLE TITLE</h1>
+
+      <div class="article-meta">
+        <img src="../fotos founder/XtraSpain.png" alt="Alisa Zinko" class="article-meta__avatar" />
+        <div>
+          <span class="article-meta__name">Alisa Zinko</span>
+          <span class="article-meta__sep">·</span>
+          <time datetime="2026-MM-DD">MONTH YEAR</time>
+          <span class="article-meta__sep">·</span>
+          <span>X min read</span>
+          <span class="article-meta__sep">·</span>
+          <span>Licensed Immigration Professional</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ARTICLE BODY -->
+  <main class="article-body" id="article-top">
+    <div class="container">
+      <div class="article-layout">
+
+        <!-- MAIN CONTENT -->
+        <article class="article-content">
+
+          <!-- Lead paragraph: what the reader will know after reading this -->
+          <p class="article-lead">LEAD PARAGRAPH. State the most useful thing the reader will learn in this article.</p>
+
+          <!-- ============================================================
+               TABLE OF CONTENTS (optional, use for articles over ~1000 words)
+               ============================================================ -->
+          <div class="article-toc">
+            <p class="article-toc__title">In this guide</p>
+            <ol>
+              <li><a href="#section-1">SECTION 1 HEADING</a></li>
+              <li><a href="#section-2">SECTION 2 HEADING</a></li>
+              <li><a href="#section-3">SECTION 3 HEADING</a></li>
+              <li><a href="#faq">Frequently asked questions</a></li>
+            </ol>
+          </div>
+
+          <!-- ============================================================
+               SECTIONS: copy h2 + prose blocks as needed
+               ============================================================ -->
+          <h2 id="section-1">SECTION 1 HEADING</h2>
+          <p>SECTION 1 CONTENT.</p>
+
+          <h2 id="section-2">SECTION 2 HEADING</h2>
+          <p>SECTION 2 CONTENT.</p>
+
+          <!-- ============================================================
+               AFFILIATE / RESOURCE BLOCK
+               How to use: replace the list items with actual tools/services.
+               Each <li> should have: <strong>Name</strong>, a short description,
+               and an <a> link to the affiliate or product URL.
+               Keep 3-6 items. Update the heading to match the article topic.
+               ============================================================ -->
+          <div class="affiliate-block">
+            <p class="affiliate-block__title">Tools &amp; resources we recommend</p>
+            <ul class="affiliate-list">
+
+              <!-- ITEM 1: replace with real affiliate link -->
+              <li>
+                <strong>TOOL NAME</strong>
+                <span>One-sentence description of what it does and why it is useful for this topic.</span>
+                <a href="AFFILIATE-URL" target="_blank" rel="noopener sponsored">Visit TOOL NAME →</a>
+              </li>
+
+              <!-- ITEM 2 -->
+              <li>
+                <strong>TOOL NAME</strong>
+                <span>One-sentence description.</span>
+                <a href="AFFILIATE-URL" target="_blank" rel="noopener sponsored">Visit TOOL NAME →</a>
+              </li>
+
+              <!-- ITEM 3 -->
+              <li>
+                <strong>TOOL NAME</strong>
+                <span>One-sentence description.</span>
+                <a href="AFFILIATE-URL" target="_blank" rel="noopener sponsored">Visit TOOL NAME →</a>
+              </li>
+
+            </ul>
+            <p style="font-size:12px; color:var(--gray-400); margin-top:16px; margin-bottom:0;">Some links above are affiliate links. XtraSpain may earn a commission if you sign up. We only recommend tools we use or have vetted.</p>
+          </div>
+
+          <h2 id="section-3">SECTION 3 HEADING</h2>
+          <p>SECTION 3 CONTENT.</p>
+
+          <!-- ============================================================
+               FAQ SECTION: mirror the FAQ schema above.
+               One <details> per question. Keep answers concise.
+               ============================================================ -->
+          <h2 id="faq">Frequently asked questions</h2>
+
+          <details open>
+            <summary>FAQ QUESTION 1?</summary>
+            <p>FAQ ANSWER 1.</p>
+          </details>
+
+          <details>
+            <summary>FAQ QUESTION 2?</summary>
+            <p>FAQ ANSWER 2.</p>
+          </details>
+
+          <details>
+            <summary>FAQ QUESTION 3?</summary>
+            <p>FAQ ANSWER 3.</p>
+          </details>
+
+          <!-- ============================================================
+               SHARE BUTTONS
+               ============================================================ -->
+          <div class="share-row" style="margin-top:48px; padding-top:32px; border-top:1px solid var(--gray-200);">
+            <span style="font-size:13px; color:var(--gray-400); font-weight:500; text-transform:uppercase; letter-spacing:0.05em;">Share</span>
+            <a href="https://twitter.com/intent/tweet?url=https://xtraspain.com/blog/ARTICLE-SLUG.html&text=ARTICLE+TITLE"
+               target="_blank" rel="noopener" class="share-btn" aria-label="Share on X (Twitter)">X</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://xtraspain.com/blog/ARTICLE-SLUG.html"
+               target="_blank" rel="noopener" class="share-btn" aria-label="Share on Facebook">Facebook</a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://xtraspain.com/blog/ARTICLE-SLUG.html&title=ARTICLE+TITLE"
+               target="_blank" rel="noopener" class="share-btn" aria-label="Share on LinkedIn">LinkedIn</a>
+            <a href="https://wa.me/?text=ARTICLE+TITLE+https://xtraspain.com/blog/ARTICLE-SLUG.html"
+               target="_blank" rel="noopener" class="share-btn" aria-label="Share on WhatsApp">WhatsApp</a>
+          </div>
+
+        </article>
+
+        <!-- SIDEBAR -->
+        <aside class="article-sidebar">
+
+          <!-- Book a session CTA -->
+          <div class="sidebar-cta sidebar-cta--terra">
+            <p class="sidebar-cta__label">Need personal advice?</p>
+            <p class="sidebar-cta__body">Book a 1:1 session with Alisa. From €99.</p>
+            <a href="../services.html" class="btn btn--terra" style="width:100%; text-align:center; display:block;">Book a Session</a>
+          </div>
+
+          <!-- Free guide CTA -->
+          <div class="sidebar-cta">
+            <p class="sidebar-cta__label">Free download</p>
+            <p class="sidebar-cta__body">The Complete Move to Spain Guide. No signup required.</p>
+            <a href="https://xtraspain.kit.com/2abadd9468" target="_blank" rel="noopener"
+               class="btn btn--outline" style="width:100%; text-align:center; display:block;">Download Free →</a>
+          </div>
+
+        </aside>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- RELATED ARTICLES -->
+  <section class="section section--gray">
+    <div class="container">
+      <h2 style="font-size:clamp(22px,2.5vw,30px); letter-spacing:-0.02em; margin-bottom:40px;">Related articles</h2>
+      <div class="blog-grid">
+
+        <!-- Replace these with 3 relevant articles -->
+        <a href="moving-to-spain-first-steps.html" class="blog-card">
+          <div class="blog-card__cat">Relocation</div>
+          <h3>Where to Start When Moving to Spain: Your First Practical Steps</h3>
+          <p class="blog-card__excerpt">Visa, NIE, empadronamiento, TIE, and tax residency. The correct order, explained clearly.</p>
+          <div class="blog-card__meta">August 2026 · 8 min read</div>
+        </a>
+
+        <a href="non-lucrative-visa-spain-2026.html" class="blog-card">
+          <div class="blog-card__cat">Visas &amp; Admin</div>
+          <h3>Spain's Non-Lucrative Visa 2026: Complete Guide</h3>
+          <p class="blog-card__excerpt">Income requirements, documents, process, and who it is right for.</p>
+          <div class="blog-card__meta">May 2026 · 10 min read</div>
+        </a>
+
+        <a href="healthcare-spain-expats.html" class="blog-card">
+          <div class="blog-card__cat">Healthcare</div>
+          <h3>Public vs. Private Healthcare in Spain: What Expats Need to Know</h3>
+          <p class="blog-card__excerpt">How to register for the public system, whether private insurance is worth it, and what it costs.</p>
+          <div class="blog-card__meta">May 2026 · 9 min read</div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="nav__logo">Xtra<span>Spain</span></span>
+          <p style="margin-top:14px;">Practical guides and relocation resources for English speakers making Spain their home.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Guides</h4>
+          <ul>
+            <li><a href="../blog.html?cat=visas">Visas &amp; Admin</a></li>
+            <li><a href="../blog.html?cat=relocation">Relocation</a></li>
+            <li><a href="../blog.html?cat=healthcare">Healthcare</a></li>
+            <li><a href="../blog.html?cat=cities">By City</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="../diy.html">Free Guides</a></li>
+            <li><a href="../blog.html">All Articles</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../services.html">1:1 Services</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Cookie Policy</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__subscribe">
+        <div>
+          <h4>Free Spain Relocation Guide</h4>
+          <p>Used by 100+ expats. Download it free, no signup required.</p>
+        </div>
+        <a href="https://xtraspain.kit.com/2abadd9468" target="_blank" rel="noopener" class="btn btn--terra">Download Free Guide →</a>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 XtraSpain. All rights reserved.</p>
+        <a href="mailto:hello@xtraspain.com">hello@xtraspain.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+
+  <!-- Sticky Download Banner -->
+  <div id="ml-sticky-banner" role="complementary" aria-label="Free guide download">
+    <p class="banner-text"><strong>Free Spain Relocation Guide</strong> — used by 100+ expats</p>
+    <a href="https://xtraspain.kit.com/2abadd9468" target="_blank" rel="noopener" class="btn btn--terra" style="white-space:nowrap; padding:0.65rem 1.5rem; font-size:0.9rem;">Download Free →</a>
+    <button id="ml-sticky-close" aria-label="Close banner">✕</button>
+  </div>
+  <script>
+  (function () {
+    var STORAGE_KEY = 'ml_banner_dismissed';
+    var banner = document.getElementById('ml-sticky-banner');
+    var closeBtn = document.getElementById('ml-sticky-close');
+    if (localStorage.getItem(STORAGE_KEY)) return;
+    var timer = setTimeout(function () { banner.classList.add('is-visible'); }, 6000);
+    closeBtn.addEventListener('click', function () {
+      banner.classList.remove('is-visible');
+      clearTimeout(timer);
+      localStorage.setItem(STORAGE_KEY, '1');
+    });
+  })();
+  </script>
+</body>
+</html>
