@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spain Visa Match — Find Your Visa in 2 Minutes | XtraSpain</title>
+  <meta name="description" content="Answer 5 questions and find out which Spain visa you qualify for, whether you meet the income threshold, which consulate covers you, and when to start your documents." />
+  <meta name="keywords" content="Spain visa match, which Spain visa do I need, Spain digital nomad visa calculator, Spain non-lucrative visa income check, Spain visa eligibility 2026" />
+  <meta name="author" content="Alisa Zinko, XtraSpain" />
+  <meta name="geo.region" content="ES" />
+  <link rel="canonical" href="https://xtraspain.com/visa-match.html" />
+  <meta property="og:title" content="Spain Visa Match — Find Your Visa in 2 Minutes | XtraSpain" />
+  <meta property="og:description" content="Answer 5 questions. Find out which Spain visa you qualify for, whether you meet the income threshold, and when to start your documents." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://xtraspain.com/visa-match.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    /* ---- Visa Match tool styles ---- */
+    .vm-wrap { max-width: 680px; margin: 0 auto; padding: 0 20px 80px; }
+    .vm-step { display: none; }
+    .vm-step.active { display: block; }
+
+    .vm-progress { display: flex; gap: 6px; margin-bottom: 40px; }
+    .vm-progress__bar { height: 3px; flex: 1; background: var(--gray-200); border-radius: 2px; transition: background 0.3s; }
+    .vm-progress__bar.done { background: var(--terra); }
+
+    .vm-q { font-family: var(--font-serif); font-size: clamp(20px,3vw,28px); font-weight: 500; letter-spacing: -0.015em; line-height: 1.3; margin-bottom: 28px; }
+    .vm-note { font-size: 13px; color: var(--gray-400); margin-bottom: 24px; margin-top: -16px; }
+
+    .vm-options { display: flex; flex-direction: column; gap: 10px; }
+    .vm-option { display: flex; align-items: flex-start; gap: 14px; padding: 16px 20px; border: 1px solid var(--gray-200); border-radius: 2px; cursor: pointer; transition: border-color 0.15s, background 0.15s; }
+    .vm-option:hover { border-color: var(--terra); }
+    .vm-option input[type="radio"] { margin-top: 2px; accent-color: var(--terra); flex-shrink: 0; width: 16px; height: 16px; }
+    .vm-option.selected { border-color: var(--terra); background: #fdf8f7; }
+    .vm-option__label { font-size: 15px; font-weight: 500; }
+    .vm-option__hint { font-size: 13px; color: var(--gray-600); margin-top: 2px; }
+
+    .vm-income-row { display: flex; gap: 10px; align-items: flex-start; flex-wrap: wrap; }
+    .vm-income-row input[type="number"] { flex: 1; min-width: 140px; padding: 12px 14px; border: 1px solid var(--gray-200); border-radius: 2px; font-size: 16px; font-family: var(--font-sans); transition: border-color 0.15s; }
+    .vm-income-row input:focus { outline: none; border-color: var(--terra); }
+    .vm-income-row select { padding: 12px 14px; border: 1px solid var(--gray-200); border-radius: 2px; font-size: 15px; font-family: var(--font-sans); background: var(--white); cursor: pointer; }
+    .vm-income-row select:focus { outline: none; border-color: var(--terra); }
+
+    .vm-number-row { display: flex; gap: 10px; align-items: center; }
+    .vm-number-row input[type="number"] { width: 100px; padding: 12px 14px; border: 1px solid var(--gray-200); border-radius: 2px; font-size: 16px; font-family: var(--font-sans); text-align: center; }
+    .vm-number-row input:focus { outline: none; border-color: var(--terra); }
+
+    .vm-date-row input[type="date"] { padding: 12px 14px; border: 1px solid var(--gray-200); border-radius: 2px; font-size: 15px; font-family: var(--font-sans); }
+    .vm-date-row input:focus { outline: none; border-color: var(--terra); }
+    .vm-skip { font-size: 13px; color: var(--gray-400); text-decoration: underline; cursor: pointer; margin-left: 12px; }
+
+    .vm-btn-row { display: flex; gap: 12px; margin-top: 32px; align-items: center; flex-wrap: wrap; }
+    .vm-back { font-size: 13px; color: var(--gray-400); cursor: pointer; text-decoration: underline; }
+    .vm-error { color: #b44; font-size: 13px; margin-top: 8px; display: none; }
+
+    /* Result */
+    .vm-result { display: none; }
+    .vm-result.active { display: block; }
+    .vm-result__visa { border: 2px solid var(--terra); border-radius: 2px; padding: 32px; margin-bottom: 24px; }
+    .vm-result__visa-name { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--terra); margin-bottom: 8px; }
+    .vm-result__heading { font-family: var(--font-serif); font-size: clamp(22px,3vw,30px); font-weight: 500; letter-spacing: -0.015em; margin-bottom: 12px; }
+    .vm-result__why { font-size: 15px; color: var(--gray-600); line-height: 1.65; }
+
+    .vm-result__row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 24px; }
+    @media (max-width: 540px) { .vm-result__row { grid-template-columns: 1fr; } }
+
+    .vm-result__card { border: 1px solid var(--gray-200); border-radius: 2px; padding: 20px; }
+    .vm-result__card-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray-400); margin-bottom: 6px; }
+    .vm-result__card-value { font-size: 17px; font-weight: 600; }
+    .vm-result__card-value.pass { color: #2a7a3b; }
+    .vm-result__card-value.fail { color: #b44; }
+    .vm-result__card-sub { font-size: 13px; color: var(--gray-600); margin-top: 4px; }
+
+    .vm-result__calendar { border: 1px solid var(--gray-200); border-radius: 2px; padding: 24px; margin-bottom: 24px; }
+    .vm-result__calendar h3 { font-size: 16px; font-weight: 600; margin-bottom: 16px; }
+    .vm-result__cal-item { display: flex; align-items: flex-start; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--gray-200); }
+    .vm-result__cal-item:last-child { border-bottom: none; }
+    .vm-result__cal-date { font-size: 12px; font-weight: 600; color: var(--terra); min-width: 90px; padding-top: 2px; }
+    .vm-result__cal-task { font-size: 14px; line-height: 1.5; }
+
+    .vm-result__ctas { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+    .vm-result__email-form { border: 1px solid var(--gray-200); border-radius: 2px; padding: 24px; }
+    .vm-result__email-form h3 { font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+    .vm-result__email-form p { font-size: 13px; color: var(--gray-600); margin-bottom: 16px; }
+    .vm-email-row { display: flex; gap: 8px; flex-wrap: wrap; }
+    .vm-email-row input { flex: 1; min-width: 180px; padding: 10px 14px; border: 1px solid var(--gray-200); border-radius: 2px; font-size: 15px; font-family: var(--font-sans); }
+    .vm-email-row input:focus { outline: none; border-color: var(--terra); }
+
+    .vm-disclaimer { font-size: 12px; color: var(--gray-400); line-height: 1.6; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--gray-200); }
+  </style>
+</head>
+<body class="page-offset">
+
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Xtra<span>Spain</span></a>
+      <ul class="nav__links">
+        <li><a href="visa-match.html">Visa Match</a></li>
+        <li><a href="requirements/index.html">Requirements</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="done-for-you.html">Done for You</a></li>
+        <li><a href="club.html">Club</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="visa-match.html" class="nav__cta">Check your visa</a></li>
+      </ul>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <section class="page-hero" style="padding-bottom:32px;">
+    <div class="container">
+      <div class="label label--terra" style="margin-bottom:16px;">Free tool</div>
+      <h1>Find your Spain visa<br><em>in 2 minutes.</em></h1>
+      <p>Answer 5 questions. Get your visa match, income check, consulate, and a personalised document calendar.</p>
+    </div>
+  </section>
+
+  <section style="padding:40px 0 80px;">
+    <div class="container">
+      <div class="vm-wrap">
+
+        <!-- Progress bar -->
+        <div class="vm-progress" id="vm-progress" aria-hidden="true">
+          <div class="vm-progress__bar" data-step="1"></div>
+          <div class="vm-progress__bar" data-step="2"></div>
+          <div class="vm-progress__bar" data-step="3"></div>
+          <div class="vm-progress__bar" data-step="4"></div>
+          <div class="vm-progress__bar" data-step="5"></div>
+        </div>
+
+        <!-- Step 1: Nationality -->
+        <div class="vm-step active" id="vm-step-1">
+          <p class="vm-q">What is your nationality?</p>
+          <div class="vm-options" role="radiogroup" aria-label="Nationality">
+            <label class="vm-option">
+              <input type="radio" name="nationality" value="US" />
+              <div><div class="vm-option__label">US citizen</div></div>
+            </label>
+            <label class="vm-option">
+              <input type="radio" name="nationality" value="CA" />
+              <div><div class="vm-option__label">Canadian citizen</div></div>
+            </label>
+            <label class="vm-option">
+              <input type="radio" name="nationality" value="UK" />
+              <div><div class="vm-option__label">UK citizen</div></div>
+            </label>
+            <label class="vm-option">
+              <input type="radio" name="nationality" value="OTHER" />
+              <div>
+                <div class="vm-option__label">Other non-EU nationality</div>
+                <div class="vm-option__hint">We can still help, but consulate matching will be limited</div>
+              </div>
+            </label>
+          </div>
+          <p class="vm-error" id="vm-err-1">Please select an option.</p>
+          <div class="vm-btn-row">
+            <button class="btn btn--terra" onclick="VM.next(1)">Continue →</button>
+          </div>
+        </div>
+
+        <!-- Step 2: State/Province -->
+        <div class="vm-step" id="vm-step-2">
+          <p class="vm-q">Which state or province are you applying from?</p>
+          <p class="vm-note">This helps us identify your consulate.</p>
+          <div style="margin-bottom: 8px;">
+            <select id="vm-region" style="width:100%; max-width:400px; padding:12px 14px; border:1px solid var(--gray-200); border-radius:2px; font-size:15px; font-family:var(--font-sans); background:var(--white);" aria-label="State or province">
+              <option value="">Select...</option>
+              <optgroup label="United States">
+                <option value="US-CA">California</option>
+                <option value="US-TX">Texas</option>
+                <option value="US-NY">New York</option>
+                <option value="US-FL">Florida</option>
+                <option value="US-IL">Illinois</option>
+                <option value="US-MA">Massachusetts</option>
+                <option value="US-WA">Washington</option>
+                <option value="US-OR">Oregon</option>
+                <option value="US-NV">Nevada</option>
+                <option value="US-AZ">Arizona</option>
+                <option value="US-DC">Washington DC</option>
+                <option value="US-VA">Virginia</option>
+                <option value="US-MD">Maryland</option>
+                <option value="US-NC">North Carolina</option>
+                <option value="US-GA">Georgia</option>
+                <option value="US-OH">Ohio</option>
+                <option value="US-MI">Michigan</option>
+                <option value="US-MN">Minnesota</option>
+                <option value="US-CO">Colorado</option>
+                <option value="US-UT">Utah</option>
+                <option value="US-OTHER">Other US state</option>
+              </optgroup>
+              <optgroup label="Canada">
+                <option value="CA-ON">Ontario</option>
+                <option value="CA-BC">British Columbia</option>
+                <option value="CA-QC">Quebec</option>
+                <option value="CA-AB">Alberta</option>
+                <option value="CA-OTHER">Other province</option>
+              </optgroup>
+              <optgroup label="United Kingdom">
+                <option value="UK-ENG">England</option>
+                <option value="UK-SCO">Scotland</option>
+                <option value="UK-WAL">Wales</option>
+                <option value="UK-NIR">Northern Ireland</option>
+              </optgroup>
+              <option value="OTHER">Outside US / Canada / UK</option>
+            </select>
+          </div>
+          <p class="vm-error" id="vm-err-2">Please select your state or province.</p>
+          <div class="vm-btn-row">
+            <button class="btn btn--terra" onclick="VM.next(2)">Continue →</button>
+            <span class="vm-back" onclick="VM.back(2)">← Back</span>
+          </div>
+        </div>
+
+        <!-- Step 3: Income type -->
+        <div class="vm-step" id="vm-step-3">
+          <p class="vm-q">What is your main source of income?</p>
+          <div class="vm-options" role="radiogroup" aria-label="Income type">
+            <label class="vm-option">
+              <input type="radio" name="income-type" value="remote-employee" />
+              <div>
+                <div class="vm-option__label">Remote employee</div>
+                <div class="vm-option__hint">You have an employment contract with a company based outside Spain</div>
+              </div>
+            </label>
+            <label class="vm-option">
+              <input type="radio" name="income-type" value="freelance" />
+              <div>
+                <div class="vm-option__label">Freelancer or contractor</div>
+                <div class="vm-option__hint">You work with multiple clients, most based outside Spain</div>
+              </div>
+            </label>
+            <label class="vm-option">
+              <input type="radio" name="income-type" value="passive" />
+              <div>
+                <div class="vm-option__label">Pension or passive income</div>
+                <div class="vm-option__hint">Pension, dividends, rental income — you are not actively working</div>
+              </div>
+            </label>
+            <label class="vm-option">
+              <input type="radio" name="income-type" value="savings" />
+              <div>
+                <div class="vm-option__label">Savings only</div>
+                <div class="vm-option__hint">You have savings or investments you will live off</div>
+              </div>
+            </label>
+          </div>
+          <p class="vm-error" id="vm-err-3">Please select an option.</p>
+          <div class="vm-btn-row">
+            <button class="btn btn--terra" onclick="VM.next(3)">Continue →</button>
+            <span class="vm-back" onclick="VM.back(3)">← Back</span>
+          </div>
+        </div>
+
+        <!-- Step 4: Income amount + dependants -->
+        <div class="vm-step" id="vm-step-4">
+          <p class="vm-q">What is your monthly income?</p>
+          <p class="vm-note">We'll check whether you meet the threshold. All calculations stay in your browser.</p>
+          <div class="vm-income-row" style="margin-bottom:8px;">
+            <input type="number" id="vm-income" min="0" placeholder="e.g. 4000" aria-label="Monthly income amount" />
+            <select id="vm-currency" aria-label="Currency">
+              <option value="EUR">EUR €</option>
+              <option value="USD">USD $</option>
+              <option value="CAD">CAD $</option>
+              <option value="GBP">GBP £</option>
+            </select>
+          </div>
+          <p id="vm-fx-note" style="font-size:12px; color:var(--gray-400); margin-bottom:24px; display:none;"></p>
+
+          <p class="vm-q" style="font-size:18px; margin-top:28px;">How many family members are coming with you?</p>
+          <p class="vm-note">Not counting yourself.</p>
+          <div class="vm-number-row">
+            <input type="number" id="vm-dependants" min="0" max="10" value="0" aria-label="Number of dependants" />
+            <span style="font-size:14px; color:var(--gray-600);">additional family members</span>
+          </div>
+          <p class="vm-error" id="vm-err-4">Please enter your monthly income.</p>
+          <div class="vm-btn-row">
+            <button class="btn btn--terra" onclick="VM.next(4)">Continue →</button>
+            <span class="vm-back" onclick="VM.back(4)">← Back</span>
+          </div>
+        </div>
+
+        <!-- Step 5: Appointment date (optional) -->
+        <div class="vm-step" id="vm-step-5">
+          <p class="vm-q">Do you have a consulate appointment date?</p>
+          <p class="vm-note">Optional. If you do, we'll build a document calendar working backwards from your appointment.</p>
+          <div class="vm-date-row" style="margin-bottom:8px;">
+            <input type="date" id="vm-appt-date" aria-label="Appointment date" />
+            <span class="vm-skip" onclick="VM.skipDate()">Skip →</span>
+          </div>
+          <div class="vm-btn-row" style="margin-top:24px;">
+            <button class="btn btn--terra" onclick="VM.calculate()">See my results →</button>
+            <span class="vm-back" onclick="VM.back(5)">← Back</span>
+          </div>
+        </div>
+
+        <!-- Result -->
+        <div class="vm-result" id="vm-result">
+
+          <div class="vm-result__visa" id="vm-result-visa">
+            <div class="vm-result__visa-name" id="vm-result-visa-label"></div>
+            <div class="vm-result__heading" id="vm-result-heading"></div>
+            <div class="vm-result__why" id="vm-result-why"></div>
+          </div>
+
+          <div class="vm-result__row">
+            <div class="vm-result__card">
+              <div class="vm-result__card-label">Income check</div>
+              <div class="vm-result__card-value" id="vm-result-income-status"></div>
+              <div class="vm-result__card-sub" id="vm-result-income-detail"></div>
+            </div>
+            <div class="vm-result__card">
+              <div class="vm-result__card-label">Your consulate</div>
+              <div class="vm-result__card-value" id="vm-result-consulate"></div>
+              <div class="vm-result__card-sub" id="vm-result-consulate-url"></div>
+            </div>
+          </div>
+
+          <div class="vm-result__calendar" id="vm-result-calendar" style="display:none;">
+            <h3>Document calendar</h3>
+            <p style="font-size:13px; color:var(--gray-600); margin-bottom:16px;">Working back from your appointment date. These are general guidelines — verify exact validity windows with your consulate.</p>
+            <div id="vm-result-cal-items"></div>
+          </div>
+
+          <div class="vm-result__ctas">
+            <div class="vm-result__email-form">
+              <h3>Email me this summary</h3>
+              <p>We'll send you the visa, income check, and document checklist. No spam.</p>
+              <div class="vm-email-row">
+                <input type="email" id="vm-email" placeholder="your@email.com" aria-label="Your email address" />
+                <button class="btn btn--terra" onclick="VM.submitEmail()" style="white-space:nowrap;">Send summary →</button>
+              </div>
+              <p id="vm-email-sent" style="display:none; font-size:13px; color:#2a7a3b; margin-top:10px;">✓ Check your inbox.</p>
+            </div>
+
+            <a id="vm-cta-kit" href="shop.html" class="btn btn--terra" style="text-align:center;">Get your full Visa File Kit — €49 →</a>
+            <a id="vm-cta-requirements" href="requirements/index.html" style="font-size:14px; color:var(--terra); text-align:center; display:block;">View full requirements for your visa →</a>
+          </div>
+
+          <div class="vm-disclaimer">
+            <strong>General information only, not legal advice.</strong> Immigration requirements change. Always verify current requirements directly with your consulate before submitting an application. Requirements last reviewed on <span id="vm-last-reviewed"></span> by Alisa Zinko, Licensed Immigration Professional.
+          </div>
+
+          <div style="margin-top:24px; text-align:center;">
+            <button onclick="VM.restart()" style="font-size:13px; color:var(--gray-400); text-decoration:underline; background:none; border:none; cursor:pointer;">Start over</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="nav__logo">Xtra<span>Spain</span></span>
+          <p style="margin-top:14px; font-size:13px;">Licensed Immigration Professional · In Spain since 2001 · Advising expats since 2008.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Tools</h4>
+          <ul>
+            <li><a href="visa-match.html">Visa Match</a></li>
+            <li><a href="requirements/index.html">Requirements</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="done-for-you.html">Done for You</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="club.html">Spain Move Club</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="recommended-lawyer.html">Recommended Lawyer</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="cookies.html">Cookie Policy</a></li>
+            <li><a href="affiliate-disclosure.html">Affiliate Disclosure</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 XtraSpain. All rights reserved.</p>
+        <a href="mailto:hello@xtraspain.com">hello@xtraspain.com</a>
+        <span style="color:var(--gray-400);">Developed by <a href="https://buenaweb.es" target="_blank" rel="noopener" style="color:var(--gray-400); text-decoration:underline;">buenaweb.es</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+  (function () {
+    'use strict';
+
+    /* -------------------------------------------------------
+       State
+    ------------------------------------------------------- */
+    var state = {
+      nationality: null,
+      region: null,
+      incomeType: null,
+      incomeAmount: null,
+      incomeCurrency: 'EUR',
+      dependants: 0,
+      apptDate: null,
+      req: null
+    };
+
+    /* -------------------------------------------------------
+       Load requirements.json
+    ------------------------------------------------------- */
+    fetch('data/requirements.json')
+      .then(function(r) { return r.json(); })
+      .then(function(data) { state.req = data; })
+      .catch(function() { console.warn('Could not load requirements.json'); });
+
+    /* -------------------------------------------------------
+       Consulate mapping (region → consulate id)
+       All TODO-VERIFY — Alisa to confirm jurisdictions
+    ------------------------------------------------------- */
+    var CONSULATE_MAP = {
+      'US-CA': 'los-angeles',
+      'US-NV': 'los-angeles',
+      'US-AZ': 'los-angeles',
+      'US-OR': 'los-angeles',
+      'US-WA': 'los-angeles',
+      'US-FL': 'miami',
+      'US-GA': 'miami',
+      'US-NC': 'miami',
+      'US-NY': 'new-york',
+      'US-NJ': 'new-york',
+      'US-CT': 'new-york',
+      'US-TX': 'houston',
+      'US-OK': 'houston',
+      'US-LA': 'houston',
+      'US-IL': 'chicago',
+      'US-OH': 'chicago',
+      'US-MI': 'chicago',
+      'US-MN': 'chicago',
+      'US-MA': 'boston',
+      'US-DC': 'washington-dc',
+      'US-VA': 'washington-dc',
+      'US-MD': 'washington-dc',
+      'US-CO': 'los-angeles',
+      'US-UT': 'los-angeles',
+      'US-OTHER': null,
+      'CA-ON': 'toronto',
+      'CA-QC': 'toronto',
+      'CA-AB': 'toronto',
+      'CA-BC': 'vancouver',
+      'CA-OTHER': null,
+      'UK-ENG': 'london',
+      'UK-SCO': 'london',
+      'UK-WAL': 'london',
+      'UK-NIR': 'london',
+      'OTHER': null
+    };
+
+    /* -------------------------------------------------------
+       Helpers
+    ------------------------------------------------------- */
+    function toEUR(amount, currency) {
+      if (!state.req) return amount;
+      var fx = state.req.fx;
+      if (!fx || !fx[currency]) return amount;
+      return amount / fx[currency];
+    }
+
+    function fmtEUR(n) {
+      return '€' + Math.round(n).toLocaleString('en');
+    }
+
+    function addDays(date, days) {
+      var d = new Date(date);
+      d.setDate(d.getDate() + days);
+      return d;
+    }
+
+    function fmtDate(d) {
+      return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' });
+    }
+
+    function getConsulate(region) {
+      var id = CONSULATE_MAP[region] || null;
+      if (!id || !state.req) return null;
+      return state.req.consulates.find(function(c) { return c.id === id; }) || null;
+    }
+
+    function getVisaSlug() {
+      var t = state.incomeType;
+      if (t === 'remote-employee' || t === 'freelance') return 'dnv';
+      return 'nlv';
+    }
+
+    /* -------------------------------------------------------
+       Progress bar
+    ------------------------------------------------------- */
+    function updateProgress(currentStep) {
+      document.querySelectorAll('.vm-progress__bar').forEach(function(bar) {
+        var s = parseInt(bar.dataset.step);
+        bar.classList.toggle('done', s < currentStep);
+      });
+    }
+
+    /* -------------------------------------------------------
+       Navigation
+    ------------------------------------------------------- */
+    window.VM = {
+      next: function(step) {
+        if (step === 1) {
+          var val = document.querySelector('input[name="nationality"]:checked');
+          if (!val) { document.getElementById('vm-err-1').style.display = 'block'; return; }
+          document.getElementById('vm-err-1').style.display = 'none';
+          state.nationality = val.value;
+          // Pre-filter region options
+          var sel = document.getElementById('vm-region');
+          Array.from(sel.querySelectorAll('optgroup')).forEach(function(og) {
+            og.style.display = (state.nationality === 'OTHER') ? '' : (og.label.toLowerCase().startsWith(state.nationality === 'US' ? 'united states' : state.nationality === 'CA' ? 'canada' : 'united kingdom') ? '' : 'none');
+          });
+        }
+        if (step === 2) {
+          var region = document.getElementById('vm-region').value;
+          if (!region) { document.getElementById('vm-err-2').style.display = 'block'; return; }
+          document.getElementById('vm-err-2').style.display = 'none';
+          state.region = region;
+        }
+        if (step === 3) {
+          var val = document.querySelector('input[name="income-type"]:checked');
+          if (!val) { document.getElementById('vm-err-3').style.display = 'block'; return; }
+          document.getElementById('vm-err-3').style.display = 'none';
+          state.incomeType = val.value;
+        }
+        if (step === 4) {
+          var inc = parseFloat(document.getElementById('vm-income').value);
+          if (!inc || inc <= 0) { document.getElementById('vm-err-4').style.display = 'block'; return; }
+          document.getElementById('vm-err-4').style.display = 'none';
+          state.incomeAmount = inc;
+          state.incomeCurrency = document.getElementById('vm-currency').value;
+          state.dependants = parseInt(document.getElementById('vm-dependants').value) || 0;
+        }
+        document.getElementById('vm-step-' + step).classList.remove('active');
+        document.getElementById('vm-step-' + (step + 1)).classList.add('active');
+        updateProgress(step + 1);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
+
+      back: function(step) {
+        document.getElementById('vm-step-' + step).classList.remove('active');
+        document.getElementById('vm-step-' + (step - 1)).classList.add('active');
+        updateProgress(step - 1);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      },
+
+      skipDate: function() {
+        state.apptDate = null;
+        VM.calculate();
+      },
+
+      calculate: function() {
+        var apptVal = document.getElementById('vm-appt-date').value;
+        state.apptDate = apptVal ? new Date(apptVal) : null;
+
+        var req = state.req;
+        var visaSlug = getVisaSlug();
+        var visa = req ? req.visas[visaSlug] : null;
+
+        // Income threshold
+        var threshold = visa ? visa.incomeMonthlyEUR.value : (visaSlug === 'dnv' ? 2849 : 2400);
+        var dependants = state.dependants;
+        var extraPerDep = visa && visa.familyRule && visa.familyRule.perDependentMonthlyEUR ? visa.familyRule.perDependentMonthlyEUR : 600;
+        var totalThreshold = threshold + (dependants * extraPerDep);
+
+        var incomeEUR = toEUR(state.incomeAmount, state.incomeCurrency);
+        var meetsThreshold = incomeEUR >= totalThreshold;
+        var gap = totalThreshold - incomeEUR;
+
+        // Consulate
+        var consulate = getConsulate(state.region);
+
+        // Populate result
+        var visaName = visa ? visa.name : (visaSlug === 'dnv' ? 'Digital Nomad Visa' : 'Non-Lucrative Visa');
+        document.getElementById('vm-result-visa-label').textContent = 'Recommended visa';
+        document.getElementById('vm-result-heading').textContent = visaName;
+
+        var whyText = '';
+        if (visaSlug === 'dnv') {
+          whyText = 'Based on your income type (remote work), the Digital Nomad Visa (DNV) is the appropriate route. It allows you to live in Spain while working remotely for foreign employers or clients.';
+        } else if (state.incomeType === 'passive') {
+          whyText = 'Based on your income type (passive income or pension), the Non-Lucrative Visa (NLV) is the appropriate route. The NLV does not permit any work — it is designed for those living on passive income.';
+        } else {
+          whyText = 'Based on your income type (savings), the Non-Lucrative Visa (NLV) is the most common route. You will need to demonstrate sufficient savings or assets to support yourself without working.';
+        }
+        document.getElementById('vm-result-why').textContent = whyText;
+
+        // Income check
+        var statusEl = document.getElementById('vm-result-income-status');
+        var detailEl = document.getElementById('vm-result-income-detail');
+        var currencyLabel = state.incomeCurrency !== 'EUR' ? ' (' + state.incomeCurrency + ' ' + Math.round(state.incomeAmount).toLocaleString('en') + ')' : '';
+        if (meetsThreshold) {
+          statusEl.textContent = '✓ You qualify';
+          statusEl.className = 'vm-result__card-value pass';
+          detailEl.textContent = fmtEUR(incomeEUR) + '/month' + currencyLabel + ' — threshold is ' + fmtEUR(totalThreshold) + (dependants > 0 ? ' (for you + ' + dependants + ' dependant' + (dependants > 1 ? 's' : '') + ')' : '');
+        } else {
+          statusEl.textContent = '✗ Gap of ' + fmtEUR(gap) + '/month';
+          statusEl.className = 'vm-result__card-value fail';
+          detailEl.textContent = 'You need ' + fmtEUR(totalThreshold) + '/month; you have ' + fmtEUR(incomeEUR) + currencyLabel + '. Consider increasing documented income or applying with a co-applicant.';
+        }
+
+        // Consulate
+        var consulateEl = document.getElementById('vm-result-consulate');
+        var consulateUrlEl = document.getElementById('vm-result-consulate-url');
+        if (consulate) {
+          consulateEl.textContent = consulate.name;
+          if (consulate.officialUrl) {
+            consulateUrlEl.innerHTML = '<a href="' + consulate.officialUrl + '" target="_blank" rel="noopener" style="color:var(--terra); font-size:13px;">Official website →</a>';
+          } else {
+            consulateUrlEl.textContent = 'Official URL not yet verified — check with your consulate.';
+          }
+        } else {
+          consulateEl.textContent = 'Check consulate list';
+          consulateUrlEl.innerHTML = '<a href="requirements/index.html" style="color:var(--terra); font-size:13px;">View all consulates →</a>';
+        }
+
+        // Document calendar
+        if (state.apptDate && req && visa && visa.documents) {
+          var calEl = document.getElementById('vm-result-cal-items');
+          calEl.innerHTML = '';
+          var relevantDocs = visa.documents.filter(function(d) { return d.validityDays && d.validityDays > 0; });
+          if (relevantDocs.length > 0) {
+            relevantDocs.forEach(function(doc) {
+              var latest = addDays(state.apptDate, -(doc.validityDays || 90));
+              var earliest = addDays(state.apptDate, -(doc.validityDays || 90) - 30);
+              var item = document.createElement('div');
+              item.className = 'vm-result__cal-item';
+              item.innerHTML = '<div class="vm-result__cal-date">' + fmtDate(earliest) + ' – ' + fmtDate(latest) + '</div><div class="vm-result__cal-task"><strong>' + doc.name.split('(')[0].trim() + '</strong> — request or obtain between these dates (valid for ' + doc.validityDays + ' days)</div>';
+              calEl.appendChild(item);
+            });
+            document.getElementById('vm-result-calendar').style.display = 'block';
+          }
+        }
+
+        // CTA links
+        var kitUrl = visaSlug === 'dnv' ? 'shop.html#kit-dnv' : 'shop.html#kit-nlv';
+        document.getElementById('vm-cta-kit').href = kitUrl;
+        var reqUrl = 'requirements/' + visaSlug + '/index.html';
+        if (consulate) reqUrl = 'requirements/' + visaSlug + '/' + (consulate.id || 'index') + '.html';
+        document.getElementById('vm-cta-requirements').href = reqUrl;
+        document.getElementById('vm-cta-requirements').textContent = 'View full ' + visaName + ' requirements →';
+
+        // Last reviewed
+        if (req) document.getElementById('vm-last-reviewed').textContent = req.lastReviewed;
+
+        // Show result
+        document.getElementById('vm-step-5').classList.remove('active');
+        document.querySelector('.vm-progress').style.display = 'none';
+        document.getElementById('vm-result').classList.add('active');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+
+        // Analytics event (placeholder)
+        if (window.xsTrack) window.xsTrack('visa_match_complete', { visa: visaSlug, meetsThreshold: meetsThreshold });
+      },
+
+      submitEmail: function() {
+        var email = document.getElementById('vm-email').value.trim();
+        if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
+        // TODO: replace with Kit form submission
+        // Placeholder — open Kit form URL
+        window.open('https://xtraspain.kit.com/2abadd9468', '_blank');
+        document.getElementById('vm-email-sent').style.display = 'block';
+        if (window.xsTrack) window.xsTrack('email_submit', { source: 'visa_match' });
+      },
+
+      restart: function() {
+        state = { nationality: null, region: null, incomeType: null, incomeAmount: null, incomeCurrency: 'EUR', dependants: 0, apptDate: null, req: state.req };
+        document.querySelectorAll('.vm-step').forEach(function(s) { s.classList.remove('active'); });
+        document.getElementById('vm-step-1').classList.add('active');
+        document.getElementById('vm-result').classList.remove('active');
+        document.querySelector('.vm-progress').style.display = 'flex';
+        updateProgress(1);
+        document.querySelectorAll('input[type="radio"]').forEach(function(r) { r.checked = false; });
+        document.querySelectorAll('.vm-option').forEach(function(o) { o.classList.remove('selected'); });
+        document.getElementById('vm-income').value = '';
+        document.getElementById('vm-dependants').value = '0';
+        document.getElementById('vm-appt-date').value = '';
+        document.getElementById('vm-email').value = '';
+        document.getElementById('vm-email-sent').style.display = 'none';
+        document.getElementById('vm-result-calendar').style.display = 'none';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+    };
+
+    // Option card selection highlight
+    document.querySelectorAll('.vm-option input[type="radio"]').forEach(function(radio) {
+      radio.addEventListener('change', function() {
+        var name = this.name;
+        document.querySelectorAll('input[name="' + name + '"]').forEach(function(r) {
+          r.closest('.vm-option').classList.toggle('selected', r.checked);
+        });
+      });
+    });
+
+  })();
+  </script>
+</body>
+</html>
