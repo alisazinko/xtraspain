@@ -1,0 +1,274 @@
+{
+  "lastReviewed": "2026-10-19",
+  "reviewedBy": "Alisa Zinko, Licensed Immigration Professional",
+  "fx": {
+    "date": "TODO-VERIFY",
+    "USD": null,
+    "CAD": null,
+    "GBP": null
+  },
+  "visas": {
+    "dnv": {
+      "name": "Digital Nomad Visa",
+      "slug": "dnv",
+      "shortName": "DNV",
+      "tagline": "For remote workers employed by or contracted to non-Spanish companies.",
+      "incomeMonthlyEUR": {
+        "value": 2849,
+        "basis": "200% of Spain's 2026 minimum wage (SMI €1,134/month × 200% × 12/12)",
+        "status": "TODO-VERIFY"
+      },
+      "familyRule": {
+        "description": "Add 75% of SMI per additional adult dependent, 25% per child",
+        "perAdultMonthlyEUR": null,
+        "perChildMonthlyEUR": null,
+        "status": "TODO-VERIFY"
+      },
+      "eligibility": [
+        "Must work remotely for employers or clients based outside Spain",
+        "Maximum 20% of income may come from Spanish clients",
+        "Valid employment contract or evidence of freelance contracts required"
+      ],
+      "documents": [
+        { "id": "passport", "name": "Valid passport", "validityMonths": 12, "apostille": false, "swornTranslation": false, "notes": "Must be valid for at least 1 year beyond intended stay", "status": "TODO-VERIFY" },
+        { "id": "criminal-record", "name": "Criminal record certificate (FBI / ACRO / RCMP)", "validityDays": 180, "apostille": true, "swornTranslation": true, "notes": "From every country of residence in the past 5 years", "status": "TODO-VERIFY" },
+        { "id": "medical-certificate", "name": "Medical certificate", "validityDays": 90, "apostille": "TODO-VERIFY", "swornTranslation": true, "notes": "", "status": "TODO-VERIFY" },
+        { "id": "health-insurance", "name": "Spanish private health insurance, no co-payments, full Spain coverage", "validityDays": null, "apostille": false, "swornTranslation": false, "notes": "Policy must cover Spain, no co-pays, no deductibles", "status": "TODO-VERIFY" },
+        { "id": "proof-of-income-employee", "name": "Proof of income (employee): last 3 payslips + employer letter confirming remote work is permitted", "validityDays": 90, "apostille": false, "swornTranslation": true, "notes": "Employer letter must explicitly state remote work from Spain is authorised", "status": "TODO-VERIFY" },
+        { "id": "proof-of-income-freelance", "name": "Proof of income (freelancer): client contracts + invoices (last 3–6 months) + business registration", "validityDays": 180, "apostille": false, "swornTranslation": true, "notes": "Must demonstrate ≥80% of income from non-Spanish clients", "status": "TODO-VERIFY" },
+        { "id": "visa-application-form", "name": "Completed visa application form (EX-01 or consulate equivalent)", "validityDays": null, "apostille": false, "swornTranslation": false, "notes": "", "status": "TODO-VERIFY" },
+        { "id": "photos", "name": "Passport-size photos", "validityDays": null, "apostille": false, "swornTranslation": false, "notes": "Quantity and specs vary by consulate — check consulate requirements", "status": "TODO-VERIFY" }
+      ]
+    },
+    "nlv": {
+      "name": "Non-Lucrative Visa",
+      "slug": "nlv",
+      "shortName": "NLV",
+      "tagline": "For retirees and those with passive income who will not work in Spain.",
+      "incomeMonthlyEUR": {
+        "value": 2400,
+        "basis": "400% of Spain's IPREM (€600/month in 2026)",
+        "status": "verified"
+      },
+      "familyRule": {
+        "description": "Add 100% of IPREM per additional family member",
+        "perDependentMonthlyEUR": 600,
+        "basis": "100% of IPREM per family member",
+        "status": "verified"
+      },
+      "eligibility": [
+        "No work of any kind permitted, including remote work for foreign employers",
+        "Must have sufficient passive income or savings",
+        "Income sources: pension, dividends, rental income, savings"
+      ],
+      "documents": [
+        { "id": "passport", "name": "Valid passport", "validityMonths": 12, "apostille": false, "swornTranslation": false, "notes": "Must be valid for at least 1 year beyond intended stay", "status": "TODO-VERIFY" },
+        { "id": "criminal-record", "name": "Criminal record certificate (FBI / ACRO / RCMP)", "validityDays": 180, "apostille": true, "swornTranslation": true, "notes": "From every country of residence in the past 5 years", "status": "TODO-VERIFY" },
+        { "id": "medical-certificate", "name": "Medical certificate", "validityDays": 90, "apostille": "TODO-VERIFY", "swornTranslation": true, "notes": "", "status": "TODO-VERIFY" },
+        { "id": "health-insurance", "name": "Spanish private health insurance, no co-payments, full Spain coverage", "validityDays": null, "apostille": false, "swornTranslation": false, "notes": "Policy must cover Spain, no co-pays, no deductibles", "status": "TODO-VERIFY" },
+        { "id": "proof-of-income", "name": "Proof of passive income: bank statements (last 6 months) or pension letters", "validityDays": 90, "apostille": false, "swornTranslation": true, "notes": "Must demonstrate sufficient income without active work", "status": "TODO-VERIFY" },
+        { "id": "declaration-no-work", "name": "Signed declaration that you will not engage in any work in Spain", "validityDays": null, "apostille": false, "swornTranslation": false, "notes": "Template included in Spain Visa File Kit", "status": "TODO-VERIFY" },
+        { "id": "visa-application-form", "name": "Completed visa application form", "validityDays": null, "apostille": false, "swornTranslation": false, "notes": "", "status": "TODO-VERIFY" },
+        { "id": "photos", "name": "Passport-size photos", "validityDays": null, "apostille": false, "swornTranslation": false, "notes": "Quantity and specs vary by consulate — check consulate requirements", "status": "TODO-VERIFY" }
+      ]
+    }
+  },
+  "consulates": [
+    {
+      "id": "los-angeles",
+      "country": "US",
+      "city": "Los Angeles",
+      "name": "Consulate General of Spain in Los Angeles",
+      "jurisdiction": [],
+      "officialUrl": "",
+      "appointmentUrl": "",
+      "phone": "",
+      "email": "",
+      "processingDaysTypical": null,
+      "quirks": [],
+      "status": "TODO-VERIFY"
+    },
+    {
+      "id": "miami",
+      "country": "US",
+      "city": "Miami",
+      "name": "Consulate General of Spain in Miami",
+      "jurisdiction": [],
+      "officialUrl": "",
+      "appointmentUrl": "",
+      "phone": "",
+      "email": "",
+      "processingDaysTypical": null,
+      "quirks": [],
+      "status": "TODO-VERIFY"
+    },
+    {
+      "id": "new-york",
+      "country": "US",
+      "city": "New York",
+      "name": "Consulate General of Spain in New York",
+      "jurisdiction": [],
+      "officialUrl": "",
+      "appointmentUrl": "",
+      "phone": "",
+      "email": "",
+      "processingDaysTypical": null,
+      "quirks": [],
+      "status": "TODO-VERIFY"
+    },
+    {
+      "id": "houston",
+      "country": "US",
+      "city": "Houston",
+      "name": "Consulate General of Spain in Houston",
+      "jurisdiction": [],
+      "officialUrl": "",
+      "appointmentUrl": "",
+      "phone": "",
+      "email": "",
+      "processingDaysTypical": null,
+      "quirks": [],
+      "status": "TODO-VERIFY"
+    },
+    {
+      "id": "san-francisco",
+      "country": "US",
+      "city": "San Francisco",
+      "name": "Consulate General of Spain in San Francisco",
+      "jurisdiction": [],
+      "officialUrl": "",
+      "appointmentUrl": "",
+      "phone": "",
+      "email": "",
+      "processingDaysTypical": null,
+      "quirks": [],
+      "status": "TODO-VERIFY"
+    },
+    {
+      "id": "chicago",
+      "country": "US",
+      "city": "Chicago",
+      "name": "Consulate General of Spain in Chicago",
+      "jurisdiction": [],
+      "officialUrl": "",
+      "appointmentUrl": "",
+      "phone": "",
+      "email": "",
+      "processingDaysTypical": null,
+      "quirks": [],
+      "status": "TODO-VERIFY"
+    },
+    {
+      "id": "boston",
+      "country": "US",
+      "city": "Boston",
+      "name": "Consulate General of Spain in Boston",
+      "jurisdiction": [],
+      "officialUrl": "",
+      "appointmentUrl": "",
+      "phone": "",
+      "email": "",
+      "processingDaysTypical": null,
+      "quirks": [],
+      "status": "TODO-VERIFY"
+    },
+    {
+      "id": "washington-dc",
+      "country": "US",
+      "city": "Washington DC",
+      "name": "Embassy of Spain in Washington DC",
+      "jurisdiction": [],
+      "officialUrl": "",
+      "appointmentUrl": "",
+      "phone": "",
+      "email": "",
+      "processingDaysTypical": null,
+      "quirks": [],
+      "status": "TODO-VERIFY"
+    },
+    {
+      "id": "london",
+      "country": "UK",
+      "city": "London",
+      "name": "Consulate General of Spain in London",
+      "jurisdiction": [],
+      "officialUrl": "",
+      "appointmentUrl": "",
+      "phone": "",
+      "email": "",
+      "processingDaysTypical": null,
+      "quirks": [],
+      "status": "TODO-VERIFY"
+    },
+    {
+      "id": "toronto",
+      "country": "CA",
+      "city": "Toronto",
+      "name": "Consulate General of Spain in Toronto",
+      "jurisdiction": [],
+      "officialUrl": "",
+      "appointmentUrl": "",
+      "phone": "",
+      "email": "",
+      "processingDaysTypical": null,
+      "quirks": [],
+      "status": "TODO-VERIFY"
+    },
+    {
+      "id": "vancouver",
+      "country": "CA",
+      "city": "Vancouver",
+      "name": "Consulate General of Spain in Vancouver",
+      "jurisdiction": [],
+      "officialUrl": "",
+      "appointmentUrl": "",
+      "phone": "",
+      "email": "",
+      "processingDaysTypical": null,
+      "quirks": [],
+      "status": "TODO-VERIFY"
+    }
+  ],
+  "cities": [
+    {
+      "id": "madrid",
+      "name": "Madrid",
+      "tie": { "office": "", "appointmentUrl": "", "notes": "", "status": "TODO-VERIFY" },
+      "empadronamiento": { "office": "", "appointmentUrl": "", "notes": "", "status": "TODO-VERIFY" },
+      "banking": { "expat-friendly-banks": [], "notes": "", "status": "TODO-VERIFY" },
+      "status": "TODO-VERIFY"
+    },
+    {
+      "id": "barcelona",
+      "name": "Barcelona",
+      "tie": { "office": "", "appointmentUrl": "", "notes": "", "status": "TODO-VERIFY" },
+      "empadronamiento": { "office": "", "appointmentUrl": "", "notes": "", "status": "TODO-VERIFY" },
+      "banking": { "expat-friendly-banks": [], "notes": "", "status": "TODO-VERIFY" },
+      "status": "TODO-VERIFY"
+    },
+    {
+      "id": "valencia",
+      "name": "Valencia",
+      "tie": { "office": "", "appointmentUrl": "", "notes": "", "status": "TODO-VERIFY" },
+      "empadronamiento": { "office": "", "appointmentUrl": "", "notes": "", "status": "TODO-VERIFY" },
+      "banking": { "expat-friendly-banks": [], "notes": "", "status": "TODO-VERIFY" },
+      "status": "TODO-VERIFY"
+    },
+    {
+      "id": "seville",
+      "name": "Seville",
+      "tie": { "office": "", "appointmentUrl": "", "notes": "", "status": "TODO-VERIFY" },
+      "empadronamiento": { "office": "", "appointmentUrl": "", "notes": "", "status": "TODO-VERIFY" },
+      "banking": { "expat-friendly-banks": [], "notes": "", "status": "TODO-VERIFY" },
+      "status": "TODO-VERIFY"
+    },
+    {
+      "id": "malaga",
+      "name": "Málaga",
+      "tie": { "office": "", "appointmentUrl": "", "notes": "", "status": "TODO-VERIFY" },
+      "empadronamiento": { "office": "", "appointmentUrl": "", "notes": "", "status": "TODO-VERIFY" },
+      "banking": { "expat-friendly-banks": [], "notes": "", "status": "TODO-VERIFY" },
+      "status": "TODO-VERIFY"
+    }
+  ]
+}

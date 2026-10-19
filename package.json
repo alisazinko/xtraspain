@@ -1,0 +1,12 @@
+{
+  "name": "xtraspain",
+  "version": "1.0.0",
+  "description": "XtraSpain static site generator",
+  "type": "module",
+  "scripts": {
+    "generate": "node scripts/generate.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

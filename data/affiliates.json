@@ -1,0 +1,41 @@
+{
+  "_note": "All affiliate links must use rel='sponsored nofollow'. Replace TODO-PLACEHOLDER with real affiliate URLs before publishing.",
+  "affiliates": [
+    {
+      "id": "feather",
+      "name": "Feather Insurance",
+      "description": "English-language health insurance for expats in Spain. No co-pays, accepted by Spanish consulates for visa applications.",
+      "url": "TODO-PLACEHOLDER",
+      "disclosure": "XtraSpain may earn a commission if you purchase through this link.",
+      "categories": ["health-insurance", "visa"],
+      "status": "TODO-PLACEHOLDER"
+    },
+    {
+      "id": "wise",
+      "name": "Wise (formerly TransferWise)",
+      "description": "Multi-currency account and international transfers. Useful for receiving income in EUR while banking from the US, UK or Canada.",
+      "url": "TODO-PLACEHOLDER",
+      "disclosure": "XtraSpain may earn a commission if you open an account through this link.",
+      "categories": ["banking", "money"],
+      "status": "TODO-PLACEHOLDER"
+    },
+    {
+      "id": "spotahome",
+      "name": "Spotahome",
+      "description": "Long-term rental platform with verified listings across Spain. Useful for securing accommodation before arriving.",
+      "url": "TODO-PLACEHOLDER",
+      "disclosure": "XtraSpain may earn a commission if you book through this link.",
+      "categories": ["housing"],
+      "status": "TODO-PLACEHOLDER"
+    },
+    {
+      "id": "holafly",
+      "name": "Holafly",
+      "description": "eSIM for Spain and Europe. Stay connected from day one without a local SIM card.",
+      "url": "TODO-PLACEHOLDER",
+      "disclosure": "XtraSpain may earn a commission if you purchase through this link.",
+      "categories": ["connectivity", "arrival"],
+      "status": "TODO-PLACEHOLDER"
+    }
+  ]
+}

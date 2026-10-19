@@ -1,0 +1,51 @@
+{
+  "_note": "Fill in all TODO-PLACEHOLDER values before launch. Do not commit real keys to git if this repo is public.",
+  "kit": {
+    "freeGuideFormUrl": "https://xtraspain.kit.com/2abadd9468",
+    "visaMatchEmailFormId": "TODO-PLACEHOLDER",
+    "visaMatchEmailFormUrl": "TODO-PLACEHOLDER"
+  },
+  "lemonSqueezy": {
+    "LS_URL_KIT_DNV": "TODO-PLACEHOLDER",
+    "LS_URL_KIT_NLV": "TODO-PLACEHOLDER",
+    "LS_URL_KIT_DNV_FAMILY_ADDON": "TODO-PLACEHOLDER",
+    "LS_URL_KIT_NLV_FAMILY_ADDON": "TODO-PLACEHOLDER",
+    "LS_URL_BUNDLE_KIT_CLUB": "TODO-PLACEHOLDER",
+    "LS_URL_GUIDE_NIE": "TODO-PLACEHOLDER",
+    "LS_URL_GUIDE_RENTING": "TODO-PLACEHOLDER",
+    "LS_URL_BUNDLE_DIY": "TODO-PLACEHOLDER",
+    "storeUrl": "https://xtraspain.lemonsqueezy.com/"
+  },
+  "club": {
+    "CLUB_JOIN_URL": "TODO-PLACEHOLDER",
+    "telegramUrl": "TODO-PLACEHOLDER"
+  },
+  "doneForYou": {
+    "ORDER_SWORN_TRANSLATION_URL": "TODO-PLACEHOLDER",
+    "ORDER_BACKGROUND_CHECK_URL": "TODO-PLACEHOLDER",
+    "ORDER_ARRIVAL_PACK_URL": "TODO-PLACEHOLDER",
+    "ORDER_COMPLEX_CASE_URL": "TODO-PLACEHOLDER"
+  },
+  "recommendedLawyer": {
+    "firmName": "TODO-PLACEHOLDER",
+    "firmUrl": "TODO-PLACEHOLDER",
+    "firmDescription": "TODO-PLACEHOLDER"
+  },
+  "analytics": {
+    "provider": "TODO-PLACEHOLDER",
+    "scriptUrl": "TODO-PLACEHOLDER",
+    "events": {
+      "visa_match_complete": "visa_match_complete",
+      "email_submit": "email_submit",
+      "buy_click": "buy_click",
+      "order_click": "order_click",
+      "club_join_click": "club_join_click"
+    }
+  },
+  "legal": {
+    "companyName": "TODO-PLACEHOLDER",
+    "nif": "TODO-PLACEHOLDER",
+    "address": "TODO-PLACEHOLDER",
+    "email": "hello@xtraspain.com"
+  }
+}
