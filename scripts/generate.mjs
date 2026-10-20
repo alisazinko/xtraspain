@@ -112,13 +112,30 @@ function footer(depth = 0) {
 
 function head({ title, desc, canonical, noindex = false, depth = 0 }) {
   const p = depth === 0 ? '' : '../'.repeat(depth);
+  const canonicalUrl = `https://xtraspain.com/${canonical}`;
+  const ogImage = 'https://xtraspain.com/fotos%20founder/XtraSpain.png';
   return `<head>
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="${p}favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>${title}</title>
   <meta name="description" content="${desc}" />
-  ${noindex ? '<meta name="robots" content="noindex,follow" />' : '<link rel="canonical" href="https://xtraspain.com/' + canonical + '" />'}
+  <meta name="author" content="Alisa Zinko, XtraSpain" />
+  <meta name="geo.region" content="ES" />
+  ${noindex ? '<meta name="robots" content="noindex,follow" />' : `<link rel="canonical" href="${canonicalUrl}" />`}
+  <link rel="sitemap" type="application/xml" href="${p}sitemap.xml" />
+  <meta property="og:title" content="${title}" />
+  <meta property="og:description" content="${desc}" />
+  <meta property="og:type" content="website" />
+  ${!noindex ? `<meta property="og:url" content="${canonicalUrl}" />` : ''}
+  <meta property="og:image" content="${ogImage}" />
+  <meta property="og:image:width" content="600" />
+  <meta property="og:image:height" content="600" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@xtraspain" />
+  <meta name="twitter:title" content="${title}" />
+  <meta name="twitter:description" content="${desc}" />
+  <meta name="twitter:image" content="${ogImage}" />
   ${FONTS}
   <link rel="stylesheet" href="${p}css/style.css" />
 </head>`;
@@ -258,6 +275,12 @@ ${head({ title: 'Spain Visa Requirements 2026 | XtraSpain', desc: 'Complete docu
         </table>
       </div>
       ${disclaimer()}
+
+      <h2 style="font-family:var(--font-serif);font-size:24px;font-weight:500;margin-top:64px;margin-bottom:8px;">Arrival guides by city</h2>
+      <p style="font-size:14px;color:var(--gray-600);margin-bottom:24px;">Once your visa is approved, you'll need to register, get your TIE, and set up your life in Spain. These guides cover the first steps in each major expat city.</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;">
+        ${req.cities.map(city => `<a href="../arrival/${city.id}.html" style="display:block;padding:16px;border:1px solid var(--gray-200);border-radius:2px;font-size:14px;font-weight:500;text-decoration:none;color:var(--black);">${city.name}</a>`).join('\n        ')}
+      </div>
     </div>
   </section>
 
@@ -318,6 +341,8 @@ ${head({ title: `Spain ${v.name} Requirements 2026 | XtraSpain`, desc: `Complete
     <div class="container">
       <div class="article-layout">
         <div class="article-main">
+
+          <p style="font-size:16px;line-height:1.75;margin-bottom:32px;color:var(--gray-600);">${v.definition}</p>
 
           <h2>Income threshold</h2>
           <div style="border:1px solid var(--gray-200);border-radius:2px;padding:20px;margin-bottom:32px;">
@@ -571,16 +596,23 @@ function genSitemap() {
     { loc: 'blog/best-cities-expats-spain.html', priority: '0.7', changefreq: 'monthly' },
   ];
 
-  // Visa index pages (only verified ones get indexed; all TODO-VERIFY so noindex but still in sitemap for discovery)
+  // Only add requirements/arrival pages that are verified (not noindex)
   for (const [slug, v] of Object.entries(req.visas)) {
-    staticPages.push({ loc: `requirements/${slug}/index.html`, priority: '0.8', changefreq: 'monthly' });
+    const visaNoindex = Object.values(v.documents).every(d => d.status !== 'verified');
+    if (!visaNoindex) {
+      staticPages.push({ loc: `requirements/${slug}/index.html`, priority: '0.8', changefreq: 'monthly' });
+    }
     for (const c of req.consulates) {
-      staticPages.push({ loc: `requirements/${slug}/${c.id}.html`, priority: '0.7', changefreq: 'monthly' });
+      if (c.status === 'verified') {
+        staticPages.push({ loc: `requirements/${slug}/${c.id}.html`, priority: '0.7', changefreq: 'monthly' });
+      }
     }
   }
 
   for (const city of req.cities) {
-    staticPages.push({ loc: `arrival/${city.id}.html`, priority: '0.7', changefreq: 'monthly' });
+    if (city.status === 'verified') {
+      staticPages.push({ loc: `arrival/${city.id}.html`, priority: '0.7', changefreq: 'monthly' });
+    }
   }
 
   const urls = staticPages.map(p => {

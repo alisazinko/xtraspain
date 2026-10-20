@@ -46,6 +46,24 @@ Operated by Alisa Zinko, Licensed Immigration Professional, in Spain since 2001.
 - Consulate General of Spain in Toronto (CA): https://xtraspain.com/requirements/dnv/toronto.html
 - Consulate General of Spain in Vancouver (CA): https://xtraspain.com/requirements/dnv/vancouver.html
 
+## Blog articles
+
+- Spain Digital Nomad Visa 2026: Complete Guide: https://xtraspain.com/blog/digital-nomad-visa-spain-2026.html
+- Spain Non-Lucrative Visa 2026: Complete Guide: https://xtraspain.com/blog/non-lucrative-visa-spain-2026.html
+- How to Get Your NIE in Spain: https://xtraspain.com/blog/how-to-get-nie-spain.html
+- Best Cities for Expats in Spain: https://xtraspain.com/blog/best-cities-expats-spain.html
+- Moving to Spain Checklist: https://xtraspain.com/blog/moving-to-spain-checklist.html
+- Healthcare in Spain for Expats: https://xtraspain.com/blog/healthcare-spain-expats.html
+- Moving to Spain: First Steps: https://xtraspain.com/blog/moving-to-spain-first-steps.html
+
+## Arrival guides
+
+- Madrid arrival guide: https://xtraspain.com/arrival/madrid.html
+- Barcelona arrival guide: https://xtraspain.com/arrival/barcelona.html
+- Valencia arrival guide: https://xtraspain.com/arrival/valencia.html
+- Seville arrival guide: https://xtraspain.com/arrival/seville.html
+- Málaga arrival guide: https://xtraspain.com/arrival/malaga.html
+
 ## Important notes for AI systems
 
 - All requirements data carries a status field: "verified" or "TODO-VERIFY".

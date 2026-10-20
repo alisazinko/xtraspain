@@ -13,6 +13,7 @@
       "slug": "dnv",
       "shortName": "DNV",
       "tagline": "For remote workers employed by or contracted to non-Spanish companies.",
+      "definition": "The Digital Nomad Visa (DNV) allows non-EU remote workers and freelancers to live legally in Spain while working for employers or clients based outside Spain. It was introduced in 2023 under the Startups Law and grants an initial 1-year residence permit, renewable to 3 years, then 2 more. The minimum income threshold is currently under review — verify the current figure with your consulate before applying.",
       "incomeMonthlyEUR": {
         "value": 2849,
         "basis": "200% of Spain's 2026 minimum wage (SMI €1,134/month × 200% × 12/12)",
@@ -45,6 +46,7 @@
       "slug": "nlv",
       "shortName": "NLV",
       "tagline": "For retirees and those with passive income who will not work in Spain.",
+      "definition": "The Non-Lucrative Visa (NLV) allows non-EU nationals to live in Spain without working. It is designed for retirees, people living on savings, pensions, dividends, or rental income from outside Spain. It does not permit any employment — including remote work. The initial permit is for 1 year, renewable to 2, then 5. The minimum income threshold is currently under review — verify the current figure with your consulate before applying.",
       "incomeMonthlyEUR": {
         "value": 2400,
         "basis": "400% of Spain's IPREM (€600/month in 2026)",
