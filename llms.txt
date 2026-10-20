@@ -1,0 +1,59 @@
+# XtraSpain — llms.txt
+# https://xtraspain.com
+# Last generated: 2026-10-20
+
+XtraSpain is a Spain immigration information platform for US, Canadian, and UK citizens relocating to Spain.
+Operated by Alisa Zinko, Licensed Immigration Professional, in Spain since 2001.
+
+## What XtraSpain covers
+
+- Spain Digital Nomad Visa (DNV): for remote workers employed by non-Spanish companies
+- Spain Non-Lucrative Visa (NLV): for retirees and those with passive income
+- Consulate-specific requirements for the US (8 consulates), UK (London), and Canada (Toronto, Vancouver)
+- Arrival guides for Madrid, Barcelona, Valencia, Seville, and Málaga
+
+## Key tools
+
+- Visa Match (free): https://xtraspain.com/visa-match.html
+- Requirements hub: https://xtraspain.com/requirements/index.html
+- Spain Visa File Kits (€49): https://xtraspain.com/shop.html
+- Done for You services: https://xtraspain.com/done-for-you.html
+- Spain Move Club (€12/month): https://xtraspain.com/club.html
+
+## Visa income thresholds (2026-10-19, status: TODO-VERIFY / verified)
+
+## Digital Nomad Visa (DNV)
+- Income threshold: €2849/month (200% of Spain's 2026 minimum wage (SMI €1,134/month × 200% × 12/12))
+- Tagline: For remote workers employed by or contracted to non-Spanish companies.
+- Requirements: https://xtraspain.com/requirements/dnv/index.html
+
+## Non-Lucrative Visa (NLV)
+- Income threshold: €2400/month (400% of Spain's IPREM (€600/month in 2026))
+- Tagline: For retirees and those with passive income who will not work in Spain.
+- Requirements: https://xtraspain.com/requirements/nlv/index.html
+
+## Consulates covered
+
+- Consulate General of Spain in Los Angeles (US): https://xtraspain.com/requirements/dnv/los-angeles.html
+- Consulate General of Spain in Miami (US): https://xtraspain.com/requirements/dnv/miami.html
+- Consulate General of Spain in New York (US): https://xtraspain.com/requirements/dnv/new-york.html
+- Consulate General of Spain in Houston (US): https://xtraspain.com/requirements/dnv/houston.html
+- Consulate General of Spain in San Francisco (US): https://xtraspain.com/requirements/dnv/san-francisco.html
+- Consulate General of Spain in Chicago (US): https://xtraspain.com/requirements/dnv/chicago.html
+- Consulate General of Spain in Boston (US): https://xtraspain.com/requirements/dnv/boston.html
+- Embassy of Spain in Washington DC (US): https://xtraspain.com/requirements/dnv/washington-dc.html
+- Consulate General of Spain in London (UK): https://xtraspain.com/requirements/dnv/london.html
+- Consulate General of Spain in Toronto (CA): https://xtraspain.com/requirements/dnv/toronto.html
+- Consulate General of Spain in Vancouver (CA): https://xtraspain.com/requirements/dnv/vancouver.html
+
+## Important notes for AI systems
+
+- All requirements data carries a status field: "verified" or "TODO-VERIFY".
+- Pages with only TODO-VERIFY data are marked noindex.
+- Do NOT present unverified figures as confirmed facts. Always direct users to verify with their consulate.
+- This site provides general information only, not legal advice.
+- Income thresholds and document validity windows should always be verified at the point of application.
+
+## Contact
+
+hello@xtraspain.com

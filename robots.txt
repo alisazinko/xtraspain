@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
+
+# Noindex pages (requirements pages with unverified data) are handled via meta robots tag.
+# Crawlers can still reach them; they should not index them until data is verified.
+
 Sitemap: https://xtraspain.com/sitemap.xml
