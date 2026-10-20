@@ -184,9 +184,9 @@ function sidebarCta(visaSlug, depth = 1) {
   const kitUrl = cfg.lemonSqueezy[`LS_URL_KIT_${visaSlug.toUpperCase()}`] || `${p}shop.html`;
   const visaName = req.visas[visaSlug].shortName;
   return `<div class="sidebar-cta sidebar-cta--terra">
-      <div class="sidebar-cta__label">Spain Visa File Kit — ${visaName}</div>
+      <div class="sidebar-cta__label">Spain Visa File Kit: ${visaName}</div>
       <div class="sidebar-cta__body">Complete document checklist, templates, and step-by-step guide for your ${visaName} application.</div>
-      <a href="${kitUrl}" class="btn btn--terra" style="display:block;text-align:center;margin-top:16px;">Get the kit — €49 →</a>
+      <a href="${kitUrl}" class="btn btn--terra" style="display:block;text-align:center;margin-top:16px;">Get the kit: €49 →</a>
     </div>
     <div class="sidebar-cta" style="margin-top:16px;">
       <div class="sidebar-cta__label">Not sure which visa?</div>
@@ -257,7 +257,7 @@ ${head({ title: 'Spain Visa Requirements 2026 | XtraSpain', desc: 'Complete docu
       </div>
 
       <h2 style="font-family:var(--font-serif);font-size:24px;font-weight:500;margin-bottom:8px;">Consulates (US, Canada, UK)</h2>
-      <p style="font-size:14px;color:var(--gray-600);margin-bottom:24px;">All consulate data is under review. Processing times and jurisdictions vary — always check the official consulate website.</p>
+      <p style="font-size:14px;color:var(--gray-600);margin-bottom:24px;">All consulate data is under review. Processing times and jurisdictions vary: always check the official consulate website.</p>
       <div style="overflow-x:auto;">
         <table class="article-content" style="width:100%;font-size:14px;">
           <thead>
@@ -422,14 +422,14 @@ function genConsulatePage(visaSlug, consulate) {
   const schema = JSON.stringify({
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": `Spain ${v.shortName} Requirements — ${c.name} | XtraSpain`,
+    "name": `Spain ${v.shortName} Requirements: ${c.name} | XtraSpain`,
     "description": `${v.name} document requirements and contact details for ${c.name}. Income threshold, document checklist, appointment info.`,
     "url": `https://xtraspain.com/requirements/${visaSlug}/${c.id}.html`
   }, null, 2);
 
   const html = `<!DOCTYPE html>
 <html lang="en">
-${head({ title: `Spain ${v.shortName} — ${c.name} Requirements 2026 | XtraSpain`, desc: `${v.name} document requirements for applicants at ${c.name}. Income threshold, document checklist, appointment booking, and consulate contact details.`, canonical: `requirements/${visaSlug}/${c.id}.html`, noindex, depth: 2 })}
+${head({ title: `Spain ${v.shortName}: ${c.name} Requirements 2026 | XtraSpain`, desc: `${v.name} document requirements for applicants at ${c.name}. Income threshold, document checklist, appointment booking, and consulate contact details.`, canonical: `requirements/${visaSlug}/${c.id}.html`, noindex, depth: 2 })}
 <body class="page-offset">
   ${nav(2)}
 
@@ -529,7 +529,7 @@ ${head({ title: `Moving to ${city.name}: First Steps After Arrival | XtraSpain`,
       </nav>
       <div class="label label--terra" style="margin-bottom:16px;">Arrival guide</div>
       <h1>Moving to ${city.name}:<br>First Steps After Arrival</h1>
-      <p>TIE card, empadronamiento, and banking — the three things you need to sort within your first weeks in ${city.name}.</p>
+      <p>TIE card, empadronamiento, and banking: the three things you need to sort within your first weeks in ${city.name}.</p>
     </div>
   </section>
 
@@ -655,7 +655,7 @@ function genLlms() {
     `- ${c.name} (${c.country}): https://xtraspain.com/requirements/dnv/${c.id}.html`
   ).join('\n');
 
-  const txt = `# XtraSpain — llms.txt
+  const txt = `# XtraSpain: llms.txt
 # https://xtraspain.com
 # Last generated: ${TODAY}
 

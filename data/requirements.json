@@ -13,7 +13,7 @@
       "slug": "dnv",
       "shortName": "DNV",
       "tagline": "For remote workers employed by or contracted to non-Spanish companies.",
-      "definition": "The Digital Nomad Visa (DNV) allows non-EU remote workers and freelancers to live legally in Spain while working for employers or clients based outside Spain. It was introduced in 2023 under the Startups Law and grants an initial 1-year residence permit, renewable to 3 years, then 2 more. The minimum income threshold is currently under review — verify the current figure with your consulate before applying.",
+      "definition": "The Digital Nomad Visa (DNV) allows non-EU remote workers and freelancers to live legally in Spain while working for employers or clients based outside Spain. It was introduced in 2023 under the Startups Law and grants an initial 1-year residence permit, renewable to 3 years, then 2 more. The minimum income threshold is currently under review: verify the current figure with your consulate before applying.",
       "incomeMonthlyEUR": {
         "value": 2849,
         "basis": "200% of Spain's 2026 minimum wage (SMI €1,134/month × 200% × 12/12)",
@@ -38,7 +38,7 @@
         { "id": "proof-of-income-employee", "name": "Proof of income (employee): last 3 payslips + employer letter confirming remote work is permitted", "validityDays": 90, "apostille": false, "swornTranslation": true, "notes": "Employer letter must explicitly state remote work from Spain is authorised", "status": "TODO-VERIFY" },
         { "id": "proof-of-income-freelance", "name": "Proof of income (freelancer): client contracts + invoices (last 3–6 months) + business registration", "validityDays": 180, "apostille": false, "swornTranslation": true, "notes": "Must demonstrate ≥80% of income from non-Spanish clients", "status": "TODO-VERIFY" },
         { "id": "visa-application-form", "name": "Completed visa application form (EX-01 or consulate equivalent)", "validityDays": null, "apostille": false, "swornTranslation": false, "notes": "", "status": "TODO-VERIFY" },
-        { "id": "photos", "name": "Passport-size photos", "validityDays": null, "apostille": false, "swornTranslation": false, "notes": "Quantity and specs vary by consulate — check consulate requirements", "status": "TODO-VERIFY" }
+        { "id": "photos", "name": "Passport-size photos", "validityDays": null, "apostille": false, "swornTranslation": false, "notes": "Quantity and specs vary by consulate: check consulate requirements", "status": "TODO-VERIFY" }
       ]
     },
     "nlv": {
@@ -46,7 +46,7 @@
       "slug": "nlv",
       "shortName": "NLV",
       "tagline": "For retirees and those with passive income who will not work in Spain.",
-      "definition": "The Non-Lucrative Visa (NLV) allows non-EU nationals to live in Spain without working. It is designed for retirees, people living on savings, pensions, dividends, or rental income from outside Spain. It does not permit any employment — including remote work. The initial permit is for 1 year, renewable to 2, then 5. The minimum income threshold is currently under review — verify the current figure with your consulate before applying.",
+      "definition": "The Non-Lucrative Visa (NLV) allows non-EU nationals to live in Spain without working. It is designed for retirees, people living on savings, pensions, dividends, or rental income from outside Spain. It does not permit any employment: including remote work. The initial permit is for 1 year, renewable to 2, then 5. The minimum income threshold is currently under review: verify the current figure with your consulate before applying.",
       "incomeMonthlyEUR": {
         "value": 2400,
         "basis": "400% of Spain's IPREM (€600/month in 2026)",
@@ -71,7 +71,7 @@
         { "id": "proof-of-income", "name": "Proof of passive income: bank statements (last 6 months) or pension letters", "validityDays": 90, "apostille": false, "swornTranslation": true, "notes": "Must demonstrate sufficient income without active work", "status": "TODO-VERIFY" },
         { "id": "declaration-no-work", "name": "Signed declaration that you will not engage in any work in Spain", "validityDays": null, "apostille": false, "swornTranslation": false, "notes": "Template included in Spain Visa File Kit", "status": "TODO-VERIFY" },
         { "id": "visa-application-form", "name": "Completed visa application form", "validityDays": null, "apostille": false, "swornTranslation": false, "notes": "", "status": "TODO-VERIFY" },
-        { "id": "photos", "name": "Passport-size photos", "validityDays": null, "apostille": false, "swornTranslation": false, "notes": "Quantity and specs vary by consulate — check consulate requirements", "status": "TODO-VERIFY" }
+        { "id": "photos", "name": "Passport-size photos", "validityDays": null, "apostille": false, "swornTranslation": false, "notes": "Quantity and specs vary by consulate: check consulate requirements", "status": "TODO-VERIFY" }
       ]
     }
   },

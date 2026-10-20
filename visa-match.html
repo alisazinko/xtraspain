@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spain Visa Match — Find Your Visa in 2 Minutes | XtraSpain</title>
+  <title>Spain Visa Match: Find Your Visa in 2 Minutes | XtraSpain</title>
   <meta name="description" content="Answer 5 questions and find out which Spain visa you qualify for, whether you meet the income threshold, which consulate covers you, and when to start your documents." />
   <meta name="keywords" content="Spain visa match, which Spain visa do I need, Spain digital nomad visa calculator, Spain non-lucrative visa income check, Spain visa eligibility 2026" />
   <meta name="author" content="Alisa Zinko, XtraSpain" />
   <meta name="geo.region" content="ES" />
   <link rel="canonical" href="https://xtraspain.com/visa-match.html" />
-  <meta property="og:title" content="Spain Visa Match — Find Your Visa in 2 Minutes | XtraSpain" />
+  <meta property="og:title" content="Spain Visa Match: Find Your Visa in 2 Minutes | XtraSpain" />
   <meta property="og:description" content="Answer 5 questions. Find out which Spain visa you qualify for, whether you meet the income threshold, and when to start your documents." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://xtraspain.com/visa-match.html" />
@@ -19,7 +19,7 @@
   <meta property="og:image:height" content="600" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@xtraspain" />
-  <meta name="twitter:title" content="Spain Visa Match — Find Your Visa in 2 Minutes | XtraSpain" />
+  <meta name="twitter:title" content="Spain Visa Match: Find Your Visa in 2 Minutes | XtraSpain" />
   <meta name="twitter:description" content="Answer 5 questions. Find out which Spain visa you qualify for, whether you meet the income threshold, and when to start your documents." />
   <meta name="twitter:image" content="https://xtraspain.com/fotos%20founder/XtraSpain.png" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
@@ -249,7 +249,7 @@
               <input type="radio" name="income-type" value="passive" />
               <div>
                 <div class="vm-option__label">Pension or passive income</div>
-                <div class="vm-option__hint">Pension, dividends, rental income — you are not actively working</div>
+                <div class="vm-option__hint">Pension, dividends, rental income: you are not actively working</div>
               </div>
             </label>
             <label class="vm-option">
@@ -333,7 +333,7 @@
 
           <div class="vm-result__calendar" id="vm-result-calendar" style="display:none;">
             <h3>Document calendar</h3>
-            <p style="font-size:13px; color:var(--gray-600); margin-bottom:16px;">Working back from your appointment date. These are general guidelines — verify exact validity windows with your consulate.</p>
+            <p style="font-size:13px; color:var(--gray-600); margin-bottom:16px;">Working back from your appointment date. These are general guidelines: verify exact validity windows with your consulate.</p>
             <div id="vm-result-cal-items"></div>
           </div>
 
@@ -348,7 +348,7 @@
               <p id="vm-email-sent" style="display:none; font-size:13px; color:#2a7a3b; margin-top:10px;">✓ Check your inbox.</p>
             </div>
 
-            <a id="vm-cta-kit" href="shop.html" class="btn btn--terra" style="text-align:center;">Get your full Visa File Kit — €49 →</a>
+            <a id="vm-cta-kit" href="shop.html" class="btn btn--terra" style="text-align:center;">Get your full Visa File Kit: €49 →</a>
             <a id="vm-cta-requirements" href="requirements/index.html" style="font-size:14px; color:var(--terra); text-align:center; display:block;">View full requirements for your visa →</a>
           </div>
 
@@ -437,7 +437,7 @@
 
     /* -------------------------------------------------------
        Consulate mapping (region → consulate id)
-       All TODO-VERIFY — Alisa to confirm jurisdictions
+       All TODO-VERIFY: Alisa to confirm jurisdictions
     ------------------------------------------------------- */
     var CONSULATE_MAP = {
       'US-CA': 'los-angeles',
@@ -607,7 +607,7 @@
         if (visaSlug === 'dnv') {
           whyText = 'Based on your income type (remote work), the Digital Nomad Visa (DNV) is the appropriate route. It allows you to live in Spain while working remotely for foreign employers or clients.';
         } else if (state.incomeType === 'passive') {
-          whyText = 'Based on your income type (passive income or pension), the Non-Lucrative Visa (NLV) is the appropriate route. The NLV does not permit any work — it is designed for those living on passive income.';
+          whyText = 'Based on your income type (passive income or pension), the Non-Lucrative Visa (NLV) is the appropriate route. The NLV does not permit any work: it is designed for those living on passive income.';
         } else {
           whyText = 'Based on your income type (savings), the Non-Lucrative Visa (NLV) is the most common route. You will need to demonstrate sufficient savings or assets to support yourself without working.';
         }
@@ -620,7 +620,7 @@
         if (meetsThreshold) {
           statusEl.textContent = '✓ You qualify';
           statusEl.className = 'vm-result__card-value pass';
-          detailEl.textContent = fmtEUR(incomeEUR) + '/month' + currencyLabel + ' — threshold is ' + fmtEUR(totalThreshold) + (dependants > 0 ? ' (for you + ' + dependants + ' dependant' + (dependants > 1 ? 's' : '') + ')' : '');
+          detailEl.textContent = fmtEUR(incomeEUR) + '/month' + currencyLabel + ': threshold is ' + fmtEUR(totalThreshold) + (dependants > 0 ? ' (for you + ' + dependants + ' dependant' + (dependants > 1 ? 's' : '') + ')' : '');
         } else {
           statusEl.textContent = '✗ Gap of ' + fmtEUR(gap) + '/month';
           statusEl.className = 'vm-result__card-value fail';
@@ -635,7 +635,7 @@
           if (consulate.officialUrl) {
             consulateUrlEl.innerHTML = '<a href="' + consulate.officialUrl + '" target="_blank" rel="noopener" style="color:var(--terra); font-size:13px;">Official website →</a>';
           } else {
-            consulateUrlEl.textContent = 'Official URL not yet verified — check with your consulate.';
+            consulateUrlEl.textContent = 'Official URL not yet verified: check with your consulate.';
           }
         } else {
           consulateEl.textContent = 'Check consulate list';
@@ -653,7 +653,7 @@
               var earliest = addDays(state.apptDate, -(doc.validityDays || 90) - 30);
               var item = document.createElement('div');
               item.className = 'vm-result__cal-item';
-              item.innerHTML = '<div class="vm-result__cal-date">' + fmtDate(earliest) + ' – ' + fmtDate(latest) + '</div><div class="vm-result__cal-task"><strong>' + doc.name.split('(')[0].trim() + '</strong> — request or obtain between these dates (valid for ' + doc.validityDays + ' days)</div>';
+              item.innerHTML = '<div class="vm-result__cal-date">' + fmtDate(earliest) + ' – ' + fmtDate(latest) + '</div><div class="vm-result__cal-task"><strong>' + doc.name.split('(')[0].trim() + '</strong>: request or obtain between these dates (valid for ' + doc.validityDays + ' days)</div>';
               calEl.appendChild(item);
             });
             document.getElementById('vm-result-calendar').style.display = 'block';
@@ -685,7 +685,7 @@
         var email = document.getElementById('vm-email').value.trim();
         if (!email || !email.includes('@')) { alert('Please enter a valid email address.'); return; }
         // TODO: replace with Kit form submission
-        // Placeholder — open Kit form URL
+        // Placeholder: open Kit form URL
         window.open('https://xtraspain.kit.com/2abadd9468', '_blank');
         document.getElementById('vm-email-sent').style.display = 'block';
         if (window.xsTrack) window.xsTrack('email_submit', { source: 'visa_match' });

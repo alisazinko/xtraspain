@@ -1,4 +1,4 @@
-# XtraSpain — llms.txt
+# XtraSpain: llms.txt
 # https://xtraspain.com
 # Last generated: 2026-10-20
 
